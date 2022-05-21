@@ -100,3 +100,48 @@ body {
     border-radius: 10px;
   }
 }
+
+@media all and (max-width: 1000px) {
+  .mainCards {
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 25%;
+  }
+  .mainBtn {
+    margin-left: 5%;
+  }
+  .cardsBtn {
+    padding: 1vh 34% 1vh 34%;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .mainCards {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    padding-bottom: 45%;
+    row-gap: 1%;
+  }
+  .singleCards {
+    background: rgba(255, 255, 255, 0.2);
+    width: 80%;
+  }
+  .cardsBtn {
+    padding: 1vh 32% 1vh 32%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .mainCards {
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 60%;
+  }
+  .singleCards {
+    background: rgba(255, 255, 255, 0.2);
+    width: 94%;
+    padding: 29.6% 0 0 2%;
+    border-radius: 10px;
+  }
+  .cardsBtn {
+    padding: 1vh 32% 1vh 32%;
+  }
+}
