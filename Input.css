@@ -7,7 +7,7 @@ body {
 
 @media all and (max-width: 2500px) {
   .header {
-    background: url("../images/headerBackground.svg");
+    background: url("./images/headerBackground.svg");
     color: white;
     padding: 14.9% 0 1.1% 4.8%;
     background-repeat: no-repeat;
