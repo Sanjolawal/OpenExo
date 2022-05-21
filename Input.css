@@ -142,6 +142,31 @@ body {
   justify-self:center;
 }
 
+/* footer section styling */
+footer{
+  background:rgb(255,255,255,0.2);
+  display:grid;
+  grid-template-columns:repeat(4, 24% 20% 20% 30%);
+  column-gap:2%;
+  padding: 4.5% 0 5.7% 8.2%;
+  color:white;
+}
+.logoIcons{
+  /* background:green; */
+  width:30%;
+  display:flex;
+  justify-content:space-between;
+}
+.noLogoOpacity{
+  font-weight:700;
+  font-size:20px;
+}
+.LogoOpacity{
+  font-weight:500;
+  opacity:0.6;
+  font-size:15px;
+}
+
 
 @media all and (max-width: 1000px) {
   .mainCards {
@@ -157,10 +182,12 @@ body {
   .roadmapImg{
   width:92vw;
 }
-    /* .upArrow{
-    background:black;
-    padding: 3.7vh 2vw 3.7vh 3vw;
-  } */
+footer{
+  
+  grid-template-columns:repeat(2, 1fr);
+ 
+}
+   
 }
 
 @media all and (max-width:980px){
@@ -242,5 +269,10 @@ body {
 .faqSummary,.faqSummary2{
  font-size:14px;
 }
-  
+  footer{
+  padding: 4.5% 0 5.7% 3%;
+  }
+  .logoIcons{
+    width:50%;
+  }
 }
