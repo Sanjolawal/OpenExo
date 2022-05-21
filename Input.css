@@ -29,6 +29,7 @@ body {
   main {
     padding: 9% 0 0 0;
     color: white;
+    display: grid;
   }
   .mainH1 {
     text-align: center;
@@ -99,7 +100,48 @@ body {
     border: none;
     border-radius: 10px;
   }
+  .faqH1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: clamp(34px, 2.8vw, 2.9vw);
+    margin-bottom: 2.8%;
+  }
+  .faqBox, .faqBox2 {
+    display: grid;
+    grid-template-columns: repeat(2, 93% 7%);
+    background: rgb(255, 255, 255, 0.2);
+    justify-self: center;
+    align-items: center;
+    width: 70%;
+    margin: 0;
+    padding: 0vh 0 0vh 1.4%;
+  }
+  .faqBox2{
+    margin-bottom:3.5%;
+  }
+  .upArrow{
+    background:black;
+    padding: 3vh 2vw 3vh 3vw;
+  }
+  .faqSummary,.faqSummary2 {
+    display: grid;
+    background: rgb(255, 255, 255, 0.5);
+    justify-self: center;
+    width: 65%;
+    margin: 0.2vh 5% 3.5% 0;
+    padding: 2vh 0 2vh 1.4%;
+    opacity:0.6;
+    line-height: 4vh;
 }
+  .faqSummary2 {
+    display:none;
+}
+.roadmapImg{
+  margin:10% 0 6% 0;
+  display:grid;
+  justify-self:center;
+}
+
 
 @media all and (max-width: 1000px) {
   .mainCards {
@@ -112,9 +154,42 @@ body {
   .cardsBtn {
     padding: 1vh 34% 1vh 34%;
   }
+  .roadmapImg{
+  width:92vw;
+}
+    /* .upArrow{
+    background:black;
+    padding: 3.7vh 2vw 3.7vh 3vw;
+  } */
+}
+
+@media all and (max-width:980px){
+    .upArrow{
+    background:black;
+    padding: 4.5vh 2vw 4.5vh 3vw;
+  }
 }
 
 @media all and (max-width: 750px) {
+ .faqBox, .faqBox2{
+   width:83%;
+ }
+  .faqDetails{
+ font-size:14px;
+
+  }
+.faqSummary,.faqSummary2{
+ font-size:14px;
+   width:77.5%;
+
+}
+   .headerH1 {
+    font-size: 60px;
+  }
+  .headerP1 {
+    font-size: 20px;
+    margin: 0 16% 34.5% 0;
+  }
   .mainCards {
     grid-template-columns: repeat(1, 1fr);
     justify-items: center;
@@ -128,9 +203,25 @@ body {
   .cardsBtn {
     padding: 1vh 32% 1vh 32%;
   }
+  .upArrow{
+  background:black;
+    padding: 3.7vh 2vw 3.7vh 3vw;
+  }
+ 
 }
 
 @media all and (max-width: 500px) {
+   .headerH1 {
+    font-size: 60px;
+  text-align:center;
+  }
+  .headerP1 {
+    font-size: 20px;
+    margin: 0 0% 34.5% 0;
+  text-align:center;
+
+  } 
+
   .mainCards {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 60%;
@@ -144,4 +235,12 @@ body {
   .cardsBtn {
     padding: 1vh 32% 1vh 32%;
   }
+    .faqDetails{
+ font-size:14px;
+
+  }
+.faqSummary,.faqSummary2{
+ font-size:14px;
+}
+  
 }
