@@ -117,7 +117,7 @@ body {
     padding: 0vh 0 0vh 1.4%;
   }
   .faqBox2{
-    margin-bottom:3.5%;
+    margin-top:3.5%;
   }
   .upArrow{
     background:black;
@@ -132,6 +132,9 @@ body {
     padding: 2vh 0 2vh 1.4%;
     opacity:0.6;
     line-height: 4vh;
+}
+.faqSummaries{
+  display:none;
 }
   .faqSummary2 {
     display:none;
