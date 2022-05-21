@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(0, 0, 0);
+}
+
+@media all and (max-width: 2500px) {
+  .header {
+    background: url("../images/headerBackground.svg");
+    color: white;
+    padding: 14.9% 0 1.1% 4.8%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  .headerH1 {
+    font-size: clamp(40px, 5.5vw, 5.6vw);
+    font-weight: 800;
+  }
+  .headerP1 {
+    font-size: clamp(16px, 1.6vw, 1.8vw);
+    margin: 0 46.6% 34.5% 0;
+  }
+  .headerPl {
+    text-align: center;
+  }
+
+  main {
+    padding: 9% 0 0 0;
+    color: white;
+  }
+  .mainH1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: clamp(34px, 2.8vw, 2.9vw);
+  }
+  .mainSpan1 {
+    color: rgb(219, 0, 255);
+  }
+  .mainP1 {
+    text-align: center;
+    opacity: 0.6;
+    font-size: clamp(18px, 1.8vw, 1.9vw);
+    padding: 0 0 2% 0;
+  }
+  .mainCards {
+    /* background: green; */
+    margin: 0 5.5% 0 5.5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2%;
+    padding-bottom: 12%;
+  }
+  .singleCards {
+    background: rgba(255, 255, 255, 0.2);
+    width: 94%;
+    padding: 29.6% 0 0 2%;
+    border-radius: 10px;
+  }
+  .cardsCon {
+    display: flex;
+    justify-content: space-between;
+  }
+  .Opacity {
+    opacity: 0.5;
+  }
+  .noOpacity {
+    font-weight: 700;
+  }
+  .Opacity1,
+  .noOpacity1 {
+    margin: 0;
+    padding: 0;
+  }
+  .Opacity1 {
+    font-weight: 500;
+    font-size: clamp(11px, 1.2vw, 1.3vw);
+    opacity: 0.5;
+    margin-left: 5%;
+  }
+  .noOpacity1 {
+    font-weight: 700;
+    font-size: clamp(14px, 1.4vw, 1.6vw);
+  }
+  .mainBtn {
+    display: flex;
+    /* background: green; */
+    align-items: center;
+    margin-bottom: 3vh;
+  }
+  .cardsBtn {
+    color: white;
+    font-size: clamp(14px, 1.4vw, 1.6vw);
+    background: rgb(219, 0, 255);
+    text-align: center;
+    padding: 1vh 30% 1vh 30%;
+    margin-left: 2%;
+    border: none;
+    border-radius: 10px;
+  }
+}
