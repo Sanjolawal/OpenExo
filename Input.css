@@ -271,8 +271,6 @@ footer{
 }
   footer{
   padding: 4.5% 0 5.7% 3%;
-  }
-  .logoIcons{
-    width:50%;
+  grid-template-columns:repeat(1, 1fr);
   }
 }
