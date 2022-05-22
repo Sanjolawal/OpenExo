@@ -9,24 +9,25 @@ body {
   .header {
     background: url("./images/headerBackground.svg");
     color: white;
-    padding: 14.9% 0 1.1% 4.8%;
-    background-repeat: no-repeat;
+    margin:0;
+    padding: 1vh 0 1vh 4.8%; 
+   background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
   }
   .headerH1 {
-    font-size: clamp(40px, 5.5vw, 5.6vw);
+    font-size: clamp(60px, 5.5vw, 5.6vw);
     font-weight: 800;
   }
   .headerP1 {
-    font-size: clamp(16px, 1.6vw, 1.8vw);
-    margin: 0 46.6% 34.5% 0;
+    font-size: clamp(23px, 1.6vw, 1.8vw);
+    margin: 0 46.6% 24.5% 0;
   }
   .headerPl {
     text-align: center;
   }
 
-  main {
+  /* main {
     padding: 9% 0 0 0;
     color: white;
     display: grid;
@@ -46,7 +47,6 @@ body {
     padding: 0 0 2% 0;
   }
   .mainCards {
-    /* background: green; */
     margin: 0 5.5% 0 5.5%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -86,7 +86,6 @@ body {
   }
   .mainBtn {
     display: flex;
-    /* background: green; */
     align-items: center;
     margin-bottom: 3vh;
   }
@@ -145,7 +144,8 @@ body {
   justify-self:center;
 }
 
-/* footer section styling */
+footer section styling
+
 footer{
   background:rgb(255,255,255,0.2);
   display:grid;
@@ -155,7 +155,6 @@ footer{
   color:white;
 }
 .logoIcons{
-  /* background:green; */
   width:30%;
   display:flex;
   justify-content:space-between;
@@ -276,4 +275,4 @@ footer{
   padding: 4.5% 0 5.7% 3%;
   grid-template-columns:repeat(1, 1fr);
   }
-}
+} */
