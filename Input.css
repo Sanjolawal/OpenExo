@@ -419,7 +419,7 @@ footer{
     right: 5vw;
     cursor: pointer;
   }
-  .bi:hover {
+  .bi:hover,.bi56:hover {
     border-radius: 5px;
     border: 2px solid white;
     padding: 0.2vh;
