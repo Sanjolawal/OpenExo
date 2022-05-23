@@ -161,7 +161,7 @@ body {
   }
 }
 
-@media all and (max-width: 950px) {
+@media all and (max-width: 1050px) {
   .navSecond {
     grid-template-columns: repeat(3, 45% 20% 30%);
   }
@@ -405,8 +405,7 @@ footer{
     grid-template-columns: repeat(1, 1fr);
     margin: -18vh 0 0 0;
   }
-  .bi56,
-  .bi {
+  .bi56 {
     display: grid;
     position: absolute;
     top: 3vh;
@@ -415,6 +414,10 @@ footer{
   }
   .bi {
     display: none;
+    position: absolute;
+    top: 3vh;
+    right: 5vw;
+    cursor: pointer;
   }
   .bi:hover {
     border-radius: 5px;
