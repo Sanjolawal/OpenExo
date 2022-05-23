@@ -441,13 +441,18 @@ footer{
 
 @media all and (max-width: 500px) {
   .text {
-    margin: 0 12% 0 0;
+    margin: 0 20% 0 0;
   }
 
   .imgSection {
     width: 100%;
   }
 }
+
+@media all and (max-width: 380px) {
+  .text {
+    margin: 0 40% 0 0;
+  }
 
 /*  .mainCards {
     grid-template-columns: repeat(1, 1fr);
