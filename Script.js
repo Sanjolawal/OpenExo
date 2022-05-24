@@ -8,13 +8,11 @@ const Run = () => {
     document.body.style.overflow = "hidden";
     const nav = document.querySelector("#nav");
     nav.style.height = "100vh";
-    nav.style.background = "rgb(75,34,90)";
-    const navSub = document.querySelectorAll("#navSub");
-    console.log(navSub);
-
-    navSub.forEach((element) => {
-      element.style.display = "grid";
-    });
+    nav.style.background = "rgb(215,0,255, 0.6)";
+    const navContainer = document.querySelector("#navContainer");
+    // console.log(navSub);
+    navContainer.style.display = "block";
+    navContainer.style.marginTop = "-35vh";
     closed.style.display = "grid";
     hamburger.style.display = "none";
   }
@@ -30,12 +28,9 @@ const Hide = () => {
     nav.style.background = "";
     closed.style.display = "none";
     hamburger.style.display = "grid";
-    const navSub = document.querySelectorAll("#navSub");
-    console.log(navSub);
-
-    navSub.forEach((element) => {
-      element.style.display = "none";
-    });
+    const navContainer = document.querySelector("#navContainer");
+    console.log(navContainer);
+    navContainer.style.display = "none";
   }
 };
 
