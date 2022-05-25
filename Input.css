@@ -58,7 +58,7 @@ body {
     width: 89%;
     margin: 5vh 0 13% 5%;
     padding: 0 0 4vh 0;
-    height: 58vh;
+    /* height: 58vh; */
   }
   .text {
     display: grid;
@@ -138,6 +138,16 @@ body {
   .headerButton {
     width: 30%;
     padding: 2vh 2vw 2vh 2vw;
+  }
+}
+
+@media all and (min-width: 750px) and (orientation: Portrait) {
+  .headerSecond {
+    /* background: red; */
+    margin: 3vh 0 2% 7%;
+  }
+  .arrowImg {
+    margin: 0;
   }
 }
 
