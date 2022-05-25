@@ -136,6 +136,7 @@ body {
   }
   .headerButton {
     width: 30%;
+    padding: 2vh 2vw 2vh 2vw;
   }
 }
 
