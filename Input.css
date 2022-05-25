@@ -149,6 +149,9 @@ body {
   .arrowImg {
     margin: 0;
   }
+  .headerButton {
+    padding: 1vh 2vw 1vh 2vw;
+  }
 }
 
 @media all and (max-width: 900px) {
