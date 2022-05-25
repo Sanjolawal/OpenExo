@@ -77,9 +77,10 @@ body {
   .headerButton {
     font-family: "Inter", sans-serif;
     font-weight: 700;
+    font-size: 18px;
     display: grid;
     width: 24%;
-    padding: 3vh 2vw 3vh 2vw;
+    padding: 2vh 2vw 2vh 2vw;
     border: none;
     border-radius: 30px;
     color: white;
@@ -105,7 +106,7 @@ body {
     display: grid;
     width: 82%;
     justify-items: end;
-    margin: 0vh 0 12% 0;
+    margin: 0vh 0 4% 0;
   }
   .pointerCon {
     display: grid;
@@ -122,6 +123,19 @@ body {
   .pointer1 {
     background-color: white;
   }
+  .corp {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: clamp(23px, 1.5vw, 1.6vw);
+    text-align: center;
+    margin: 6% 0 2% 0;
+  }
+}
+
+@media all and (max-width:1270px){
+.headerButton {
+    width: 30%;
+  }
 }
 
 @media all and (max-width: 1120px) {
@@ -137,7 +151,6 @@ body {
   }
   .headerButton {
     width: 30%;
-    padding: 2vh 2vw 2vh 2vw;
   }
 }
 
@@ -158,6 +171,9 @@ body {
   nav {
     grid-template-columns: repeat(2, 20% 64%);
     column-gap: 12%;
+  }
+   .headerButton {
+    width: 40%;
   }
 }
 
@@ -211,6 +227,7 @@ body {
   }
 
   .arrowSection {
+    display: none;
     justify-items: center;
     margin: 4vh 0 0 0;
   }
@@ -240,10 +257,14 @@ body {
   }
 
   .pointers {
+    display: none;
     width: 94%;
     justify-items: center;
   }
   .pointerCon {
     width: 56%;
+  }
+  .corp{
+    font-size:16px;
   }
 }
