@@ -47,7 +47,7 @@ body {
     background: url("./images/headerBackground.svg");
     color: white;
     margin: 0;
-    padding: 1vh 0 1vh 4.8%;
+    padding: 1vh 0 1vh 0%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -55,8 +55,8 @@ body {
   .headerSecond {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 85%;
-    margin: 5vh 0 13% 7%;
+    width: 89%;
+    margin: 5vh 0 13% 5%;
     padding: 0 0 4vh 0;
     height: 58vh;
   }
@@ -93,10 +93,11 @@ body {
     justify-items: end;
     border-radius: 8px;
     align-items: center;
+    /* background:red; */
   }
   .arrowImg {
     width: 100%;
-    margin: 0;
+    margin: 20vh 0 0 0;
     object-fit: cover;
     cursor: pointer;
   }
@@ -199,6 +200,9 @@ body {
   .arrowSection {
     justify-items: center;
     margin: 4vh 0 0 0;
+  }
+  .arrowImg {
+    margin: 0;
   }
 
   .bi56 {
