@@ -44,7 +44,7 @@ body {
   /* Header section */
 
   .header {
-    /* background: url("./images/headerBackground.svg"); */
+    background: url("./images/headerBackground.svg");
     color: white;
     margin: 0;
     padding: 1vh 0 1vh 0%;
