@@ -44,13 +44,9 @@ body {
   /* Header section */
 
   .header {
-    background: url("./images/headerBackground.svg");
     color: white;
     margin: 0;
     padding: 1vh 0 1vh 0%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
   }
   .headerSecond {
     display: grid;
@@ -132,8 +128,8 @@ body {
   }
 }
 
-@media all and (max-width:1270px){
-.headerButton {
+@media all and (max-width: 1270px) {
+  .headerButton {
     width: 30%;
   }
 }
@@ -172,7 +168,7 @@ body {
     grid-template-columns: repeat(2, 20% 64%);
     column-gap: 12%;
   }
-   .headerButton {
+  .headerButton {
     width: 40%;
   }
 }
@@ -264,7 +260,7 @@ body {
   .pointerCon {
     width: 56%;
   }
-  .corp{
-    font-size:16px;
+  .corp {
+    font-size: 16px;
   }
 }
