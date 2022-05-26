@@ -158,9 +158,6 @@ body {
 }
 
 @media all and (min-width: 750px) and (orientation: Portrait) {
-  .navContainer {
-    margin: 0 0 0.2vh 0;
-  }
   .headerSecond {
     /* background: red; */
     margin: 3vh 0 2% 7%;
