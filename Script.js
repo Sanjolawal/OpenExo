@@ -8,7 +8,7 @@ const Run = () => {
     document.body.style.overflow = "hidden";
     const nav = document.querySelector("#nav");
     nav.style.height = "100vh";
-    nav.style.background = "rgb(215,0,255, 0.6)";
+    nav.style.background = "rgb(215,0,255, 1)";
     const navContainer = document.querySelector("#navContainer");
     // console.log(navSub);
     navContainer.style.display = "block";

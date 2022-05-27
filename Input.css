@@ -7,12 +7,16 @@ body {
 
 @media all and (max-width: 2500px) {
   .navDiv {
+    position: absolute;
+    top: 0vh;
     display: grid;
     grid-template-columns: repeat(3, 20% 48%);
     column-gap: 24%;
     font-weight: 200;
     margin: 0 0 0 0;
     padding: 0 0 0 4%;
+    width: 96%;
+    color: white;
   }
 
   .navContainer {
@@ -46,6 +50,7 @@ body {
   .bi56,
   .bi {
     display: none;
+    z-index: 100;
   }
 
   /* Header section */
@@ -59,9 +64,8 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     width: 89%;
-    margin: 5vh 0 13% 5%;
+    margin: 14vh 0 13% 5%;
     padding: 0 0 4vh 0;
-    /* height: 58vh; */
   }
   .text {
     display: grid;
@@ -147,7 +151,7 @@ body {
     column-gap: 20%;
   }
   .headerSecond {
-    margin: 3vh 0 20% 7%;
+    margin: 12vh 0 20% 7%;
   }
   .headerH1 {
     font-size: 8vw;
@@ -160,7 +164,7 @@ body {
 @media all and (min-width: 750px) and (orientation: Portrait) {
   .headerSecond {
     /* background: red; */
-    margin: 3vh 0 2% 7%;
+    margin: 12vh 0 2% 7%;
   }
   .arrowImg {
     margin: 0;
@@ -185,6 +189,7 @@ body {
     grid-template-columns: repeat(1, 1fr);
     margin: -1vh 0 0 0%;
     padding: 1vh 0 0 5%;
+    width: 95%;
   }
   .navContainer {
     display: none;
@@ -197,13 +202,17 @@ body {
   }
   .navMenu1 {
     padding: 1.5vh;
-    width: 70%;
+    width: 80%;
   }
-
+  .navMenu:hover,
+  .navMenu1:hover {
+    border: 2px solid rgb(255, 255, 255, 1);
+    opacity: 0.7;
+  }
   .headerSecond {
     grid-template-columns: repeat(1, 1fr);
     height: 100%;
-    margin: 1vh 0 6vh 5%;
+    margin: 10vh 0 6vh 5%;
   }
   .text {
     justify-self: center;
