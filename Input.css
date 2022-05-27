@@ -164,7 +164,7 @@ body {
 @media all and (min-width: 750px) and (orientation: Portrait) {
   .headerSecond {
     /* background: red; */
-    margin: 12vh 0 2% 7%;
+    margin: 5vh 0 2% 7%;
   }
   .arrowImg {
     margin: 0;
