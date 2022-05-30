@@ -35,3 +35,22 @@ const Hide = () => {
 };
 
 closed.addEventListener("click", Hide);
+
+// POPUP SCRIPT SECTION
+
+const popUpClosed = document.querySelector("#popUpClosed");
+const navMenu1 = document.querySelector("#navMenu1");
+console.log(popUpClosed);
+
+const showPopUp = () => {
+  popUpCon.style.display = "grid";
+};
+
+navMenu1.addEventListener("click", showPopUp);
+
+const hidePopUp = () => {
+  popUpCon.style.display = "none";
+  console.log(popUpClosed);
+};
+
+popUpClosed.addEventListener("click", hidePopUp);

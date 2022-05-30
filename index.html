@@ -65,7 +65,6 @@
             rent or trade.
           </p>
           <button class="headerButton">Mint Now</button>
-          <!-- </div> -->
         </div>
         <div class="arrowSection">
           <div>
@@ -97,9 +96,122 @@
         <li class="navMenu">Explore</li>
         <li class="navMenu">FAQs</li>
         <li class="navMenu">Stats</li>
-        <li class="navMenu1">Connect Wallet</li>
+        <li class="navMenu1" id="navMenu1">Connect Wallet</li>
       </ul>
     </nav>
+
+    <!-- Connect wallet popup page -->
+    <div class="popUpCon" id="popUpCon">
+      <div class="popUp">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          fill="currentColor"
+          class="bipop bi-x"
+          id="popUpClosed"
+          viewBox="0 0 16 16"
+          loading="lazy"
+        >
+          <path
+            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+          />
+        </svg>
+
+        <h1 class="popUpH1">Connect Wallet</h1>
+        <p1 class="popUpH4"
+          >Connect with one of our available<span class="popH4Span">
+            wallet
+          </span>
+          providers or create a new one</p1
+        >
+
+        <div class="connect">
+          <div class="connectDiv">
+            <img
+              src="Images/metamask.svg"
+              alt="metamask"
+              loading="lazy"
+              class="siteLogo"
+            />
+            <p class="Name">Metamask</p>
+            <p class="metaMaskTitle">Popular</p>
+            <img
+              src="Images/right arrow.svg"
+              alt="metamask"
+              loading="lazy"
+              class="rightArrow"
+            />
+          </div>
+
+          <div class="connectDiv1">
+            <img
+              src="Images/coinbase.svg"
+              alt="coinBase"
+              loading="lazy"
+              class="siteLogo"
+            />
+            <p class="Name">CoinBase Wallet</p>
+            <img
+              src="Images/right arrow.svg"
+              alt="coinBase"
+              loading="lazy"
+              class="rightArrow"
+            />
+          </div>
+
+          <div class="connectDiv1">
+            <img
+              src="Images/walletconnect.svg"
+              alt="walletConnect"
+              loading="lazy"
+              class="siteLogo"
+            />
+            <p class="Name">Wallet Connect</p>
+            <img
+              src="Images/right arrow.svg"
+              alt="walletConnect"
+              loading="lazy"
+              class="rightArrow"
+            />
+          </div>
+
+          <div class="connectDiv">
+            <img
+              src="Images/phantom.svg"
+              alt="phantom"
+              loading="lazy"
+              class="siteLogo"
+            />
+            <p class="Name">Phantom</p>
+            <p class="Title">Solana</p>
+            <img
+              src="Images/right arrow.svg"
+              alt="phantom"
+              loading="lazy"
+              class="rightArrow"
+            />
+          </div>
+
+          <div class="connectDiv">
+            <img
+              src="Images/Glow.svg"
+              alt="glow"
+              loading="lazy"
+              class="siteLogo"
+            />
+            <p class="Name">Glow</p>
+            <p class="Title">Solana</p>
+            <img
+              src="Images/right arrow.svg"
+              alt="glow"
+              loading="lazy"
+              class="rightArrow"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="Script.js"></script>
   </body>

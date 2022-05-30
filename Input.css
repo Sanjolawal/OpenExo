@@ -2,7 +2,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: rgb(0, 0, 0);
+  color: black;
+  font-family: "inter";
+  background: black;
 }
 
 @media all and (max-width: 2500px) {
@@ -137,6 +139,105 @@ body {
     text-align: center;
     margin: 6% 0 2% 0;
   }
+
+  /* POPUP PAGE STYLING SECTION */
+  .popUpCon {
+    background: rgb(0, 0, 0, 0.3);
+    width: 99vw;
+    z-index: 100;
+    position: fixed;
+    top: 0vh;
+    display: none;
+    padding-top: 10vh;
+  }
+  .popUp {
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    display: grid;
+    justify-self: center;
+    justify-items: center;
+    width: 60%;
+    color: white;
+    padding: 0 0 6% 0;
+  }
+  .bipop {
+    display: grid;
+    justify-self: end;
+    margin: 3vh;
+    cursor: pointer;
+  }
+  .bipop:hover {
+    border: 1px solid rgb(255, 255, 255, 0.6);
+    border-radius: 4px;
+  }
+  .popUpH1,
+  .popUpH4 {
+    text-align: center;
+  }
+  .popUpH1 {
+    font-family: "inter";
+    font-weight: 700;
+    font-size: clamp(26px, 2.4vw, 2.5vw);
+  }
+  .popUpH4 {
+    font-family: "inter";
+    font-weight: 600;
+    font-size: clamp(14px, 1.1vw, 1.6vw);
+  }
+  .popH4Span {
+    color: rgb(219, 0, 255);
+  }
+  .connect {
+    display: grid;
+    width: 50%;
+    justify-items: center;
+    margin-top: 5%;
+  }
+
+  .connectDiv,
+  .connectDiv1 {
+    display: grid;
+    grid-template-columns: repeat(4, 4% 20% 30% 45%);
+    align-items: center;
+    width: 90%;
+    column-gap: 4%;
+    padding: 0.6vh 0 0.6vh 1vw;
+    border: 1px solid rgb(255, 255, 255, 0.4);
+    cursor: pointer;
+  }
+  .connectDiv1 {
+    grid-template-columns: repeat(3, 4% 40% 73%);
+  }
+  .connectDiv:nth-child(1) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .connectDiv:nth-child(5) {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .siteLogo {
+    width: 150%;
+  }
+  .rightArrow {
+    display: grid;
+    justify-self: center;
+  }
+
+  .Title,
+  .metaMaskTitle {
+    background: rgb(255, 255, 255, 0.3);
+    border-radius: 30px;
+    padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+    text-align: center;
+  }
+  .metaMaskTitle {
+    background: rgb(219, 0, 255);
+  }
+  .Name,
+  .Title {
+    font-weight: 500;
+  }
 }
 
 @media all and (max-width: 1270px) {
@@ -158,6 +259,13 @@ body {
   }
   .headerButton {
     width: 30%;
+  }
+
+  .popUp {
+    width: 80%;
+  }
+  .connect {
+    width: 65%;
   }
 }
 
@@ -221,7 +329,6 @@ body {
   .headerButton {
     justify-self: center;
     width: 40%;
-    margin: ;
   }
   .headerH1,
   .headerP1 {
@@ -278,5 +385,14 @@ body {
   }
   .corp {
     font-size: 16px;
+  }
+  .popUp {
+    width: 96%;
+  }
+  .connect {
+    width: 96%;
+  }
+  .popUpH4 {
+    margin: 0vh 2vw 0 2vw;
   }
 }
