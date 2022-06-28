@@ -8,15 +8,47 @@
     <link rel="shortcut icon" href="./Images/Logo (2).png" />
     <link rel="stylesheet" type="text/css" href="Input.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body id="body">
+    <!-- SPLASH PAGE SECTION -->
+
+    <div class="splashContainer" id="splashContainer">
+      <div class="splashContainer2">
+        <img src="Images/logo.png" alt="Logo" />
+        <video
+          src="Videos/animation_video_colored (1).mp4"
+          controls
+          autoplay
+          muted
+          type="video/mp4"
+          width="90%"
+        ></video>
+        <form class="splashForm">
+          <div class="splashForm2">
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <button type="submit" id="splashSubmit">Enter to view</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <!-- Header section -->
 
     <header
       class="header"
+      id="header"
       style="
         background: url(Images/headerBackground.png);
         background-repeat: no-repeat;
@@ -212,6 +244,58 @@
         </div>
       </div>
     </div>
+
+    <!-- \\cards section -->
+    <main class="cardhead">
+      <div>
+        <h1 class="cardH1">Available <span class="cardSpan1"> Land</span></h1>
+        <p class="cardP1">Worlds First Exoplanet Marketplace</p>
+      </div>
+    </main>
+
+    <!-- Cards section minus FAQ -->
+
+    <div class="mainCards" id="mainCards"></div>
+
+    <!-- <faq section html -->
+
+    <!-- <h1 class="faqH1">FAQs</h1>
+    <div class="faqBox" id="faqBox">
+      <p class="faqDetails">
+        1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut augue
+        scelerisque fringilla congue.
+      </p>
+      <img
+        src="./Images/Up arrow.svg"
+        alt="redlove"
+        loading="lazy"
+        class="upArrow"
+        id="upArrow"
+      />
+    </div>
+    <p class="faqSummary" id="faqSummary">
+      Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut augue
+      scelerisque fringilla congue. Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit. Ut augue scelerisque fringilla congue.
+    </p>
+
+    <div class="faqBox2">
+      <p class="faqDetails">
+        2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut augue
+        scelerisque fringilla congue.
+      </p>
+      <img
+        src="./Images/down arrow.svg"
+        alt="redlove"
+        loading="lazy"
+        class="upArrow"
+      />
+    </div>
+    <p class="faqSummary2">
+      Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut augue
+      scelerisque fringilla congue. Lorem ipsum dolor sit amet, consectetur
+      adipiscing elit. Ut augue scelerisque fringilla congue.
+    </p> -->
 
     <script src="Script.js"></script>
   </body>
