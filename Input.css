@@ -592,6 +592,9 @@ body {
   .popUpCon {
     padding-top: 5vh;
   }
+  #LogoOpacity{
+    font-size:12px;
+  }
 }
 
 @media all and (max-width: 900px) {
