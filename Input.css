@@ -5,8 +5,8 @@ body {
   color: black;
   font-family: "inter";
   background: black;
-  height: 100vh;
-  overflow-y: hidden;
+  /* height: 100vh;
+  overflow-y: hidden; */
 }
 
 @media all and (max-width: 2500px) {
@@ -31,11 +31,12 @@ body {
     display: grid;
     justify-self: center;
     justify-items: center;
-    align-items: center;
-    row-gap: 2vh;
-    height: 70vh;
+    padding: 2vh 0 2vh 0;
   }
-
+  .splashVideo {
+    width: 80%;
+    margin: 2vh 0 2vh 0;
+  }
   input[type="password"] {
     color: black;
     padding: 1vh;
@@ -414,7 +415,7 @@ body {
     display: grid;
     background: rgb(255, 255, 255, 0.2);
     width: 60%;
-    margin-bottom: 4vh;
+    margin-bottom: 0.4vh;
     padding: 0vh 0 0vh 1.4%;
     /* background: red; */
     justify-self: center;
@@ -422,6 +423,7 @@ body {
     color: white;
     border-radius: 6px 6px 0 0;
   }
+
   .faqContainer {
     display: grid;
     grid-template-columns: repeat(2, 95% 5%);
@@ -429,26 +431,37 @@ body {
     align-items: center;
     /* background: yellow; */
   }
-  .faqBox2 {
-    /* margin-top: 3.5%; */
+  /* .faqBox2 {
     margin: 0 20% 0 20%;
-  }
+  } */
   .upArrow {
     cursor: pointer;
   }
   .faqSummarycon {
     display: grid;
   }
+
   .faqSummary {
     display: none;
     background: rgb(255, 255, 255, 0.5);
+    justify-self: center;
+    width: 60%;
+    margin: 0.2vh 0% 1.5% 0%;
+    padding: 2vh 0 2vh 1.4%;
+    opacity: 0.6;
+    line-height: 4vh;
+    color: white;
+  }
+  .faqSummary2 {
+    display: grid;
+    /* background: rgb(255, 255, 255, 0.5);
     justify-self: center;
     width: 60%;
     margin: 0.2vh 0% 3.5% 0%;
     padding: 2vh 0 2vh 1.4%;
     opacity: 0.6;
     line-height: 4vh;
-    color: white;
+    color: white; */
   }
   .mainRoadmap {
     /* color: white; */
@@ -457,19 +470,28 @@ body {
     justify-items: center;
     padding-bottom: 4vh;
   }
+  .mainRoadmap2 {
+    display: none;
+  }
+  .roadmapImg {
+    width: 70%;
+  }
+  .teamContainer {
+    /* background: red; */
+    margin: 6vh 0 0 0;
+  }
   .project {
     text-align: center;
     font-family: "inter", sans-serif;
     font-weight: 700;
     font-size: clamp(34px, 3.1vw, 3.2vw);
     color: white;
+    margin: 0;
   }
   .roadmap {
     color: rgb(219, 0, 255);
   }
-  .roadmapImg {
-    width: 70%;
-  }
+
   .teamSection {
     /* background: red; */
     display: grid;
@@ -484,6 +506,7 @@ body {
     row-gap: 4vh;
     justify-self: center;
     padding-bottom: 3vh;
+    margin-top: 4vh;
   }
   .teamCard {
     background: #2e365a;
@@ -537,7 +560,9 @@ body {
   }
   .splashContainer2 {
     width: 54%;
-    height: 80%;
+  }
+  .splashVideo {
+    margin: 1vh 0 2vh 0;
   }
 }
 @media all and (max-width: 1150px) {
@@ -549,7 +574,7 @@ body {
 }
 @media all and (max-width: 1120px) {
   .splashContainer2 {
-    width: 74%;
+    width: 70%;
   }
   .navDiv {
     grid-template-columns: repeat(2, 20% 54%);
@@ -592,8 +617,8 @@ body {
   .popUpCon {
     padding-top: 5vh;
   }
-  #LogoOpacity{
-    font-size:12px;
+  #LogoOpacity {
+    font-size: 12px;
   }
 }
 
@@ -613,7 +638,9 @@ body {
   }
   .splashContainer2 {
     width: 94%;
-    height: 60%;
+  }
+  .splashVideo {
+    width: 100%;
   }
   .splashForm {
     width: 100%;
@@ -740,6 +767,31 @@ body {
   .faqSummary {
     width: 70%;
   }
+  .mainRoadmap2 {
+    display: block;
+    /* background: red; */
+  }
+  .roadmapImg {
+    display: none;
+  }
+  .roadmapMobile {
+    color: white;
+    /* background: yellow; */
+    display: grid;
+    justify-items: center;
+    margin: 0;
+  }
+  .roadmapHead {
+    color: rgb(219, 0, 255);
+    margin: 3vh 0 1vh 0;
+    font-size: 30px;
+  }
+  .roadPar {
+    margin: 0 0 3vh 0;
+    /* background: yellow; */
+    font-size: 14px;
+  }
+
   .teamSection {
     /* background: yellow; */
     padding: 0 0 8vh 0;
@@ -785,5 +837,8 @@ body {
   .faqSummary {
     width: 80%;
     padding: 0vh 1.4% 0vh 1.4%;
+  }
+  .teamSubsection {
+    grid-template-columns: repeat(6, 86%);
   }
 }

@@ -179,29 +179,55 @@ mainCards.innerHTML = newdata.join(" ");
 
 // FAQ SECTION SCRIPT
 
-const upArrow = document.querySelector("#upArrow");
-
+const upArrow = document.querySelectorAll("#upArrow");
 const faqBox = document.querySelector("#faqBox");
-const faqSummary = document.querySelector("#faqSummary");
+const faqSummary = document.querySelectorAll("#faqSummary");
 
-let check = true;
+console.log(upArrow);
+upArrow.forEach((each) => {
+  each.addEventListener("click", () => {
+    let change = document.querySelector("#faqSummary");
+    console.log(change);
+    change.classList.toggle("faqSummary2");
+  });
+});
 
-function faqHide() {
-  if (check) {
-    faqSummary.style.display = "grid";
-    faqBox.style.marginBottom = "1vh";
-    upArrow.style.transform = "rotate(180deg)";
-    check = false;
-  } else {
-    faqSummary.style.display = "none";
-    faqBox.style.marginBottom = "4vh";
-    upArrow.style.transform = "rotate(0deg)";
-    check = true;
-  }
-}
+// Roadmap section script
 
-upArrow.addEventListener("click", faqHide);
+const roadmap = [
+  {
+    phase: "Phase 1",
+    info: "50GH of Hash power activation",
+  },
+  {
+    phase: "Phase 2",
+    info: "150GH of Hash power activation",
+  },
+  {
+    phase: "Phase 3",
+    info: "300GH of Hash power activation",
+  },
+  {
+    phase: "Phase 4",
+    info: "500GH of Hash power activation",
+  },
+  {
+    phase: "Phase 5",
+    info: "Build GMS's own mining facility with GMS fams",
+  },
+];
+let newroadmap = roadmap.map((each) => {
+  return `
+  <div class="roadmapMobile">
+        <h1 class="roadmapHead">${each.phase}</h1>
+        <p class="roadPar">${each.info}</p>
+      </div>  `;
+});
 
+const mainRoadmap2 = document.querySelector(".mainRoadmap2");
+mainRoadmap2.innerHTML = ` <p class="project">Project <span class="roadmap"> Roadmap</span></p>${newroadmap.join(
+  " "
+)}`;
 // OUR TEAM SCRIPT SECTION
 
 const teams = [
@@ -252,6 +278,5 @@ let newteam = teams.map((each) => {
         `;
 });
 
-// console.log(newteam.join(" "));
 const teamSubsection = document.querySelector(".teamSubsection");
 teamSubsection.innerHTML = newteam.join(" ");

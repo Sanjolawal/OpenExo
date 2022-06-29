@@ -21,14 +21,14 @@
 
     <div class="splashContainer" id="splashContainer">
       <div class="splashContainer2">
-        <img src="Images/logo.png" alt="Logo" />
+        <img src="Images/logo.png" alt="Logo" class="splashImg" />
         <video
           src="Videos/animation_video_colored (1).mp4"
           controls
           autoplay
           muted
           type="video/mp4"
-          width="90%"
+          class="splashVideo"
         ></video>
         <form class="splashForm">
           <div class="splashForm2">
@@ -268,14 +268,14 @@
             src="./Images/Up arrow.svg"
             alt="redlove"
             loading="lazy"
-            class="upArrow1"
+            class="upArrow"
             id="upArrow"
           />
         </div>
       </div>
     </div>
     <div class="faqSummarycon">
-      <p class="faqSummary" id="faqSummary">
+      <p class="faqSummary" id="faqSummary" data="me">
         Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut augue
         scelerisque fringilla congue. Lorem ipsum dolor sit amet, consectetur
         adipiscing elit. Ut augue scelerisque fringilla congue.
@@ -307,21 +307,21 @@
     <!-- <ROADMAP SECTION -->
 
     <div class="mainRoadmap">
-      <!-- <p class="project">Project <span class="roadmap"> Roadmap</span></p> -->
       <img src="Images/Raodmap.svg" alt="project image" class="roadmapImg" />
     </div>
+    <div class="mainRoadmap2"></div>
 
     <!-- <team section -->
-
-    <p class="project">Our <span class="roadmap"> Team</span></p>
-    <div class="teamSection">
-      <div class="teamSubsection"></div>
+    <div class="teamContainer">
+      <p class="project">Our <span class="roadmap"> Team</span></p>
+      <div class="teamSection">
+        <div class="teamSubsection"></div>
+      </div>
     </div>
-
 
     <!-- Footer section -->
 
-      <footer>
+    <footer>
       <div class="footer1">
         <img
           src="./Images/logo.png"
@@ -358,8 +358,7 @@
           <img src="./Images/instagram.svg" alt="logoicons" loading="lazy" />
         </div>
       </div>
-    </footer> 
-
+    </footer>
 
     <script src="Script.js"></script>
   </body>
