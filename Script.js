@@ -77,7 +77,7 @@ const hidePopUp = () => {
 
 popUpClosed.addEventListener("click", hidePopUp);
 
-// Cards section script and info 
+// Cards section script and info
 
 const data = [
   {
@@ -176,3 +176,82 @@ const newdata = data.map((each) => {
 const mainCards = document.querySelector("#mainCards");
 
 mainCards.innerHTML = newdata.join(" ");
+
+// FAQ SECTION SCRIPT
+
+const upArrow = document.querySelector("#upArrow");
+
+const faqBox = document.querySelector("#faqBox");
+const faqSummary = document.querySelector("#faqSummary");
+
+let check = true;
+
+function faqHide() {
+  if (check) {
+    faqSummary.style.display = "grid";
+    faqBox.style.marginBottom = "1vh";
+    upArrow.style.transform = "rotate(180deg)";
+    check = false;
+  } else {
+    faqSummary.style.display = "none";
+    faqBox.style.marginBottom = "4vh";
+    upArrow.style.transform = "rotate(0deg)";
+    check = true;
+  }
+}
+
+upArrow.addEventListener("click", faqHide);
+
+// OUR TEAM SCRIPT SECTION
+
+const teams = [
+  {
+    img: "Images/team1.png",
+    name: "DAVID",
+    title: "Co-Founder",
+  },
+  {
+    img: "Images/team2.png",
+    name: "PARKER",
+    title: "Lead Project Communicator",
+  },
+  {
+    img: "Images/team3.png",
+    name: "ABE",
+    title: "Lead Developer",
+  },
+  {
+    img: "Images/team4.png",
+    name: "RAYAN",
+    title: "Co-Founder",
+  },
+  {
+    img: "Images/team5.png",
+    name: "DEVIL",
+    title: "Artist",
+  },
+  {
+    img: "Images/team6.png",
+    name: "PARTNER",
+    title: "QnHBC,llc",
+  },
+];
+
+let newteam = teams.map((each) => {
+  return `
+   <section class="teamCard">
+          <img
+            src="${each.img}"
+            alt="team image"
+            class="teamImg"
+            loading="lazy"
+          />
+          <h1 class="teamName">${each.name}</h1>
+          <p class="teamTitle">${each.title}</p>
+        </section>
+        `;
+});
+
+// console.log(newteam.join(" "));
+const teamSubsection = document.querySelector(".teamSubsection");
+teamSubsection.innerHTML = newteam.join(" ");
