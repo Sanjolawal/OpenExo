@@ -20,11 +20,45 @@ const Prevent = (e) => {
 
 splashSubmit.addEventListener("click", Prevent);
 
+// Carousel script
+
+const arrowImg = document.querySelector(".arrowImg");
+const carousel = document.querySelector(".carousel");
+
+const ChangeSection = () => {
+  if (window.innerWidth < 1000) {
+    header.style.display = "grid";
+    carousel.style.display = "none";
+  } else {
+    header.style.display = "none";
+    carousel.style.display = "grid";
+  }
+};
+
+arrowImg.addEventListener("click", ChangeSection);
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth < 1000) {
+    header.style.display = "grid";
+    carousel.style.display = "none";
+  }
+});
+
+// Carousel exit script
+
+const exitCarousel = document.querySelector(".exitCarousel");
+
+const GoBack = () => {
+  header.style.display = "grid";
+  carousel.style.display = "none";
+};
+
+exitCarousel.addEventListener("click", GoBack);
+
 // NAVIGATION BAR OPENING AND CLOSING SCRIPT/
 
 const hamburger = document.querySelector("#hamburger");
 const closed = document.querySelector("#closed");
-console.log(closed);
 
 const Run = () => {
   if (window.innerWidth < 750) {
@@ -58,11 +92,45 @@ const Hide = () => {
 
 closed.addEventListener("click", Hide);
 
+// window.addEventListener("resize", function () {
+//   if (window.innerWidth < 750) {
+//     document.body.style.height = "";
+//     document.body.style.overflow = "visible";
+//     nav.style.height = "";
+//     nav.style.background = "";
+//     closed.style.display = "none";
+//     hamburger.style.display = "grid";
+//     const navContainer = document.querySelector("#navContainer");
+//     console.log(navContainer);
+//     navContainer.style.display = "none";
+//   }
+// });
+
+// FAQS and Team SCROLLING SCRIPT
+
+const a = document.querySelector(".a");
+const ab = document.querySelector(".ab");
+
+const Fix = () => {
+  if (window.innerWidth < 750) {
+    document.body.style.height = "";
+    document.body.style.overflow = "visible";
+    nav.style.height = "";
+    nav.style.background = "";
+    closed.style.display = "none";
+    hamburger.style.display = "grid";
+    const navContainer = document.querySelector("#navContainer");
+    console.log(navContainer);
+    navContainer.style.display = "none";
+  }
+};
+a.addEventListener("click", Fix);
+ab.addEventListener("click", Fix);
+
 // CONNECT WALLET POPUP SCRIPT SECTION
 
 const popUpClosed = document.querySelector("#popUpClosed");
 const navMenu1 = document.querySelector("#navMenu1");
-console.log(popUpClosed);
 
 const showPopUp = () => {
   popUpCon.style.display = "grid";
@@ -180,15 +248,13 @@ mainCards.innerHTML = newdata.join(" ");
 // FAQ SECTION SCRIPT
 
 const upArrow = document.querySelectorAll("#upArrow");
-const faqBox = document.querySelector("#faqBox");
+const faqBox = document.querySelectorAll("#faqBox");
 const faqSummary = document.querySelectorAll("#faqSummary");
 
-console.log(upArrow);
 upArrow.forEach((each) => {
-  each.addEventListener("click", () => {
-    let change = document.querySelector("#faqSummary");
-    console.log(change);
-    change.classList.toggle("faqSummary2");
+  each.addEventListener("click", function (e) {
+    console.log(e.currentTarget);
+    e.currentTarget.style.transform = "rotate(180deg)";
   });
 });
 

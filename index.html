@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Openexo.io</title>
-    <link rel="shortcut icon" href="./Images/Logo (2).png" />
+    <link rel="shortcut icon" href="./Images/logo.png" />
     <link rel="stylesheet" type="text/css" href="Input.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
@@ -99,14 +99,24 @@
           <button class="headerButton">Mint Now</button>
         </div>
         <div class="arrowSection">
-          <div>
+          <!-- <div>
             <img
               src="./Images/Planet arrow.svg"
               alt="human"
               class="arrowImg"
               loading="lazy"
             />
-          </div>
+          </div> -->
+          <model-viewer
+            src="Videos/Mars.glb"
+            alt="Planet"
+            auto-rotate
+            camera-controls
+            ar
+            ios-src="Videos/mars_map.glb"
+            class="arrowImg"
+          >
+          </model-viewer>
         </div>
       </div>
       <div class="pointers">
@@ -119,14 +129,43 @@
       <p class="corp">Openexo.io 2022 Corp | Legal Notice</p>
     </header>
 
+    <!-- Carousel section -->
+
+    <div class="carousel">
+      <div class="carouselCard">
+        <p class="exitCarousel">⬅ Go back</p>
+        <img src="Images/team3.png" alt="carousel cards" />
+      </div>
+      <div class="carouselCardInfo">
+        <h1 class="carouselHead">TESTING</h1>
+        <p class="coordinates">
+          0°7'5 S 82°6'4 W<br />
+          2°22'15 S 79°13'18 W
+        </p>
+        <button class="carouselBtn">More info ➡</button>
+      </div>
+      <div class="zoomedSpaced">
+        <!-- <img src="images/headerBackground.png" alt="planet" class="zoomedImg" /> -->
+        <model-viewer
+          src="Videos/Mars.glb"
+          alt="Planet"
+          camera-controls
+          ar
+          ios-src="Videos/mars_map.glb"
+          class="zoomedImg"
+        >
+        </model-viewer>
+      </div>
+    </div>
+
     <!-- Navbar section, it was made to be here, due to to the carousel implemented on the homepage -->
 
     <nav id="nav" class="navDiv">
       <img src="Images/logo.png" alt="" class="navLogo" />
       <ul class="navContainer" id="navContainer">
-        <li class="navMenu">Mint</li>
+        <li class="navMenu"><a href="#TEAM" class="ab">Team</a></li>
         <li class="navMenu">Explore</li>
-        <li class="navMenu">FAQs</li>
+        <li class="navMenu"><a href="#FAQS" class="a">FAQs</a></li>
         <li class="navMenu">Stats</li>
         <li class="navMenu1" id="navMenu1">Connect Wallet</li>
       </ul>
@@ -259,29 +298,7 @@
 
     <!-- <faq section html -->
 
-    <h1 class="faqH1">FAQs</h1>
-    <div class="faqBoxcon">
-      <div class="faqBox" id="faqBox">
-        <div class="faqContainer">
-          <p class="faqDetails">1. Lorem ipsum dolor sit amet.</p>
-          <img
-            src="./Images/Up arrow.svg"
-            alt="redlove"
-            loading="lazy"
-            class="upArrow"
-            id="upArrow"
-          />
-        </div>
-      </div>
-    </div>
-    <div class="faqSummarycon">
-      <p class="faqSummary" id="faqSummary" data="me">
-        Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut augue
-        scelerisque fringilla congue. Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit. Ut augue scelerisque fringilla congue.
-      </p>
-    </div>
-
+    <h1 class="faqH1" id="FAQS">FAQs</h1>
     <div class="faqBoxcon">
       <div class="faqBox" id="faqBox">
         <div class="faqContainer">
@@ -304,6 +321,28 @@
       </p>
     </div>
 
+    <div class="faqBoxcon">
+      <div class="faqBox" id="faqBox">
+        <div class="faqContainer">
+          <p class="faqDetails">1. Lorem ipsum dolor sit amet.</p>
+          <img
+            src="./Images/Up arrow.svg"
+            alt="redlove"
+            loading="lazy"
+            class="upArrow"
+            id="upArrow"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="faqSummarycon">
+      <p class="faqSummary" id="faqSummary">
+        Ans2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut augue
+        scelerisque fringilla congue. Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit. Ut augue scelerisque fringilla congue.
+      </p>
+    </div>
+
     <!-- <ROADMAP SECTION -->
 
     <div class="mainRoadmap">
@@ -312,7 +351,7 @@
     <div class="mainRoadmap2"></div>
 
     <!-- <team section -->
-    <div class="teamContainer">
+    <div class="teamContainer" id="TEAM">
       <p class="project">Our <span class="roadmap"> Team</span></p>
       <div class="teamSection">
         <div class="teamSubsection"></div>
@@ -361,5 +400,15 @@
     </footer>
 
     <script src="Script.js"></script>
+    <!--Imports a model-viewer JavaScript code -->
+    <!--It helps to handle how the 3D Object would be displayed -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
   </body>
 </html>
