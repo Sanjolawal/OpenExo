@@ -23,7 +23,7 @@ html {
   }
   /* Splash Page Styling */
   .splashContainer {
-    background: rgba(111, 71, 230, 0.9);
+    background: black;
     display: grid;
     /* display: none; */
     justify-content: center;
@@ -206,12 +206,23 @@ html {
   .pointer1 {
     background-color: white;
   }
-  .corp {
+  .corp,
+  .corp1,
+  .corp2 {
     font-family: "Inter", sans-serif;
     font-weight: 500;
     font-size: clamp(23px, 1.5vw, 1.6vw);
     text-align: center;
     margin: 6% 0 2% 0;
+  }
+  .corp1 {
+    color: white;
+    margin-bottom: 0;
+  }
+  .corp2 {
+    font-size: clamp(18px, 1.1vw, 1.2vw);
+    color: white;
+    margin: 0% 0 1% 0;
   }
 
   /* POPUP PAGE STYLING SECTION */
@@ -727,6 +738,9 @@ html {
   .splashForm {
     width: 100%;
   }
+  .corp2 {
+    margin: 0% 0 4% 0;
+  }
   .navDiv {
     grid-template-columns: repeat(1, 1fr);
     margin: -1vh 0 0 0%;
@@ -740,7 +754,7 @@ html {
   }
   .navMenu {
     padding: 1.5vh;
-    width: 30%;
+    width: 40%;
   }
   .navMenu1 {
     padding: 1.5vh;

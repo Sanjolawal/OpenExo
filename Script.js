@@ -106,7 +106,7 @@ closed.addEventListener("click", Hide);
 //   }
 // });
 
-// FAQS and Team SCROLLING SCRIPT
+// FAQS and Team Navigations SCROLLING SCRIPT
 
 const a = document.querySelector(".a");
 const ab = document.querySelector(".ab");
@@ -124,8 +124,8 @@ const Fix = () => {
     navContainer.style.display = "none";
   }
 };
-a.addEventListener("click", Fix);
 ab.addEventListener("click", Fix);
+a.addEventListener("click", Fix);
 
 // CONNECT WALLET POPUP SCRIPT SECTION
 
@@ -147,177 +147,177 @@ popUpClosed.addEventListener("click", hidePopUp);
 
 // Cards section script and info
 
-const data = [
-  {
-    name: "@johny",
-    title: "Lorem Ipsum",
-    bid: "Current Bid",
-    price: "0.005ETH",
-    img: "./Images/red love.svg",
-    cta: "Buy Now",
-  },
-  {
-    name: "@johny",
-    title: "Lorem Ipsum",
-    bid: "Current Bid",
-    price: "0.005ETH",
-    img: "./Images/red love.svg",
-    cta: "Buy Now",
-  },
-  {
-    name: "@johny",
-    title: "Lorem Ipsum",
-    bid: "Current Bid",
-    price: "0.005ETH",
-    img: "./Images/red love.svg",
-    cta: "Buy Now",
-  },
-  {
-    name: "@johny",
-    title: "Lorem Ipsum",
-    bid: "Current Bid",
-    price: "0.005ETH",
-    img: "./Images/red love.svg",
-    cta: "Buy Now",
-  },
-  {
-    name: "@johny",
-    title: "Lorem Ipsum",
-    bid: "Current Bid",
-    price: "0.005ETH",
-    img: "./Images/red love.svg",
-    cta: "Buy Now",
-  },
-  {
-    name: "@johny",
-    title: "Lorem Ipsum",
-    bid: "Current Bid",
-    price: "0.005ETH",
-    img: "./Images/red love.svg",
-    cta: "Buy Now",
-  },
-  {
-    name: "@johny",
-    title: "Lorem Ipsum",
-    bid: "Current Bid",
-    price: "0.005ETH",
-    img: "./Images/red love.svg",
-    cta: "Buy Now",
-  },
-  {
-    name: "@johny",
-    title: "Lorem Ipsum",
-    bid: "Current Bid",
-    price: "0.005ETH",
-    img: "./Images/red love.svg",
-    cta: "Buy Now",
-  },
-  {
-    name: "@johny",
-    title: "Lorem Ipsum",
-    bid: "Current Bid",
-    price: "0.005ETH",
-    img: "./Images/red love.svg",
-    cta: "Buy Now",
-  },
-];
-const newdata = data.map((each) => {
-  return `
-       <div class="singleCards">
-        <div class="cardsCon">
-          <artcile>
-            <p class="Opacity">${each.name}</p>
-            <p class="noOpacity">${each.title}</p>
-          </artcile>
-          <section>
-            <p class="Opacity1">${each.bid}</p>
-            <p class="noOpacity1">${each.price}</p>
-          </section>
-        </div>
-        <div class="mainBtn">
-          <img src="./Images/red love.svg" alt="redlove" loading="lazy" />
-          <button class="cardsBtn">${each.cta}</button>
-        </div>
-      </div> `;
-});
+// const data = [
+//   {
+//     name: "@johny",
+//     title: "Lorem Ipsum",
+//     bid: "Current Bid",
+//     price: "0.005ETH",
+//     img: "./Images/red love.svg",
+//     cta: "Buy Now",
+//   },
+//   {
+//     name: "@johny",
+//     title: "Lorem Ipsum",
+//     bid: "Current Bid",
+//     price: "0.005ETH",
+//     img: "./Images/red love.svg",
+//     cta: "Buy Now",
+//   },
+//   {
+//     name: "@johny",
+//     title: "Lorem Ipsum",
+//     bid: "Current Bid",
+//     price: "0.005ETH",
+//     img: "./Images/red love.svg",
+//     cta: "Buy Now",
+//   },
+//   {
+//     name: "@johny",
+//     title: "Lorem Ipsum",
+//     bid: "Current Bid",
+//     price: "0.005ETH",
+//     img: "./Images/red love.svg",
+//     cta: "Buy Now",
+//   },
+//   {
+//     name: "@johny",
+//     title: "Lorem Ipsum",
+//     bid: "Current Bid",
+//     price: "0.005ETH",
+//     img: "./Images/red love.svg",
+//     cta: "Buy Now",
+//   },
+//   {
+//     name: "@johny",
+//     title: "Lorem Ipsum",
+//     bid: "Current Bid",
+//     price: "0.005ETH",
+//     img: "./Images/red love.svg",
+//     cta: "Buy Now",
+//   },
+//   {
+//     name: "@johny",
+//     title: "Lorem Ipsum",
+//     bid: "Current Bid",
+//     price: "0.005ETH",
+//     img: "./Images/red love.svg",
+//     cta: "Buy Now",
+//   },
+//   {
+//     name: "@johny",
+//     title: "Lorem Ipsum",
+//     bid: "Current Bid",
+//     price: "0.005ETH",
+//     img: "./Images/red love.svg",
+//     cta: "Buy Now",
+//   },
+//   {
+//     name: "@johny",
+//     title: "Lorem Ipsum",
+//     bid: "Current Bid",
+//     price: "0.005ETH",
+//     img: "./Images/red love.svg",
+//     cta: "Buy Now",
+//   },
+// ];
+// const newdata = data.map((each) => {
+//   return `
+//        <div class="singleCards">
+//         <div class="cardsCon">
+//           <artcile>
+//             <p class="Opacity">${each.name}</p>
+//             <p class="noOpacity">${each.title}</p>
+//           </artcile>
+//           <section>
+//             <p class="Opacity1">${each.bid}</p>
+//             <p class="noOpacity1">${each.price}</p>
+//           </section>
+//         </div>
+//         <div class="mainBtn">
+//           <img src="./Images/red love.svg" alt="redlove" loading="lazy" />
+//           <button class="cardsBtn">${each.cta}</button>
+//         </div>
+//       </div> `;
+// });
 
-const mainCards = document.querySelector("#mainCards");
+// const mainCards = document.querySelector("#mainCards");
 
-mainCards.innerHTML = newdata.join(" ");
+// mainCards.innerHTML = newdata.join(" ");
 
 // FAQ SECTION SCRIPT
 
-let reviews = [
-  {
-    qos: "1. Lorem ipsum dolor sit amet.",
-    img: "Images/Up arrow.svg",
-    ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-            augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
-  },
-  {
-    qos: "1. Lorem ipsum dolor sit amet.",
-    img: "Images/Up arrow.svg",
-    ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-            augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
-  },
-  {
-    qos: "1. Lorem ipsum dolor sit amet.",
-    img: "Images/Up arrow.svg",
-    ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-            augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
-  },
-  {
-    qos: "1. Lorem ipsum dolor sit amet.",
-    img: "Images/Up arrow.svg",
-    ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-            augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
-  },
-  {
-    qos: "1. Lorem ipsum dolor sit amet.",
-    img: "Images/Up arrow.svg",
-    ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-            augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
-  },
-];
+// let reviews = [
+//   {
+//     qos: "1. Lorem ipsum dolor sit amet.",
+//     img: "Images/Up arrow.svg",
+//     ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+//             augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
+//             consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
+//   },
+//   {
+//     qos: "1. Lorem ipsum dolor sit amet.",
+//     img: "Images/Up arrow.svg",
+//     ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+//             augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
+//             consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
+//   },
+//   {
+//     qos: "1. Lorem ipsum dolor sit amet.",
+//     img: "Images/Up arrow.svg",
+//     ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+//             augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
+//             consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
+//   },
+//   {
+//     qos: "1. Lorem ipsum dolor sit amet.",
+//     img: "Images/Up arrow.svg",
+//     ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+//             augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
+//             consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
+//   },
+//   {
+//     qos: "1. Lorem ipsum dolor sit amet.",
+//     img: "Images/Up arrow.svg",
+//     ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+//             augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
+//             consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
+//   },
+// ];
 
-let newReviews = reviews.map((each) => {
-  return `
-    <div class="faqBoxcon">
-      <div class="faqBox" id="faqBox">
-        <div class="faqContainer">
-          <p class="faqDetails">${each.qos}</p>
-          <img
-            src="${each.img}"
-            alt="Up arrow"
-            loading="lazy"
-            class="upArrow"
-            id="upArrow"
-          />
-        </div>
-      </div>
-        <p class="faqSummary" id="faqSummary">
-           ${each.ans}
-          </p>
-    </div>`;
-});
+// let newReviews = reviews.map((each) => {
+//   return `
+//     <div class="faqBoxcon">
+//       <div class="faqBox" id="faqBox">
+//         <div class="faqContainer">
+//           <p class="faqDetails">${each.qos}</p>
+//           <img
+//             src="${each.img}"
+//             alt="Up arrow"
+//             loading="lazy"
+//             class="upArrow"
+//             id="upArrow"
+//           />
+//         </div>
+//       </div>
+//         <p class="faqSummary" id="faqSummary">
+//            ${each.ans}
+//           </p>
+//     </div>`;
+// });
 
-const overallFaq = document.querySelector(".overallFaq");
+// const overallFaq = document.querySelector(".overallFaq");
 
-overallFaq.innerHTML = newReviews;
+// overallFaq.innerHTML = newReviews;
 
-const faqBoxcon = document.querySelectorAll(".faqBoxcon");
+// const faqBoxcon = document.querySelectorAll(".faqBoxcon");
 
-faqBoxcon.forEach((each) => {
-  each.addEventListener("click", function (e) {
-    console.log(e.currentTarget.lastElementChild);
-    e.currentTarget.lastElementChild.classList.toggle("faqSummary2");
-  });
-});
+// faqBoxcon.forEach((each) => {
+//   each.addEventListener("click", function (e) {
+//     console.log(e.currentTarget.lastElementChild);
+//     e.currentTarget.lastElementChild.classList.toggle("faqSummary2");
+//   });
+// });
 
 // Roadmap section script
 
