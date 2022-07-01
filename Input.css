@@ -137,7 +137,8 @@ html {
     width: 89%;
     margin: 14vh 0 13% 5%;
     padding: 0 0 4vh 0;
-    /* background: red; */
+    /* background: red;
+     */
   }
   .text {
     display: grid;
@@ -516,9 +517,9 @@ html {
   .upArrow {
     cursor: pointer;
   }
-  .faqSummarycon {
+  /* .faqSummarycon {
     display: grid;
-  }
+  } */
 
   .faqSummary {
     display: none;
@@ -532,7 +533,7 @@ html {
     color: white;
   }
   .faqSummary2 {
-    display: grid;
+    display: block;
     /* background: rgb(255, 255, 255, 0.5);
     justify-self: center;
     width: 60%;
@@ -554,6 +555,7 @@ html {
   }
   .roadmapImg {
     width: 70%;
+    margin-top: 5vh;
   }
   .teamContainer {
     /* background: red; */
@@ -643,6 +645,9 @@ html {
   .splashVideo {
     margin: 1vh 0 2vh 0;
   }
+  .carousel {
+    grid-template-columns: 22.5% 22.5% 55%;
+  }
 }
 @media all and (max-width: 1150px) {
   .mainCards {
@@ -699,8 +704,11 @@ html {
   #LogoOpacity {
     font-size: 12px;
   }
-  .carousel {
+  /* .carousel {
     margin-top: 7vh;
+  } */
+  .arrowImg {
+    display: none;
   }
 }
 
@@ -758,7 +766,9 @@ html {
   }
   .text {
     justify-self: center;
-    width: 100%;
+    /* width: 100%; */
+    /* background: red; */
+    height: 80%;
   }
   .headerButton {
     justify-self: center;
@@ -775,14 +785,16 @@ html {
   }
   .headerP1 {
     font-size: 19px;
-    margin: 0 0 14vh 0;
+    margin: 0 0 4vh 0;
     text-align: center;
   }
 
   .arrowSection {
-    display: none;
+    /* display: grid; */
     justify-items: center;
-    margin: 4vh 0 0 0;
+    align-items: start;
+    margin: 0vh 0 5vh 0;
+    /* background:red; */
   }
   .arrowImg {
     margin: 0;
@@ -904,6 +916,13 @@ html {
 }
 
 @media all and (max-width: 500px) {
+  .arrowSection {
+    margin: 2vh 0 -4vh 0;
+    /* background:red; */
+  }
+  .arrowImg {
+    height: 46vh;
+  }
   .mainCards {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 88%;

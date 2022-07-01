@@ -247,14 +247,75 @@ mainCards.innerHTML = newdata.join(" ");
 
 // FAQ SECTION SCRIPT
 
-const upArrow = document.querySelectorAll("#upArrow");
-const faqBox = document.querySelectorAll("#faqBox");
-const faqSummary = document.querySelectorAll("#faqSummary");
+let reviews = [
+  {
+    qos: "1. Lorem ipsum dolor sit amet.",
+    img: "Images/Up arrow.svg",
+    ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+            augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
+  },
+  {
+    qos: "1. Lorem ipsum dolor sit amet.",
+    img: "Images/Up arrow.svg",
+    ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+            augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
+  },
+  {
+    qos: "1. Lorem ipsum dolor sit amet.",
+    img: "Images/Up arrow.svg",
+    ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+            augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
+  },
+  {
+    qos: "1. Lorem ipsum dolor sit amet.",
+    img: "Images/Up arrow.svg",
+    ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+            augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
+  },
+  {
+    qos: "1. Lorem ipsum dolor sit amet.",
+    img: "Images/Up arrow.svg",
+    ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+            augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
+  },
+];
 
-upArrow.forEach((each) => {
+let newReviews = reviews.map((each) => {
+  return `
+    <div class="faqBoxcon">
+      <div class="faqBox" id="faqBox">
+        <div class="faqContainer">
+          <p class="faqDetails">${each.qos}</p>
+          <img
+            src="${each.img}"
+            alt="Up arrow"
+            loading="lazy"
+            class="upArrow"
+            id="upArrow"
+          />
+        </div>
+      </div>
+        <p class="faqSummary" id="faqSummary">
+           ${each.ans}
+          </p>
+    </div>`;
+});
+
+const overallFaq = document.querySelector(".overallFaq");
+
+overallFaq.innerHTML = newReviews;
+
+const faqBoxcon = document.querySelectorAll(".faqBoxcon");
+
+faqBoxcon.forEach((each) => {
   each.addEventListener("click", function (e) {
-    console.log(e.currentTarget);
-    e.currentTarget.style.transform = "rotate(180deg)";
+    console.log(e.currentTarget.lastElementChild);
+    e.currentTarget.lastElementChild.classList.toggle("faqSummary2");
   });
 });
 
