@@ -785,7 +785,8 @@ html {
     /* display: grid; */
     justify-items: center;
     align-items: start;
-    margin: 0vh 0 5vh 0;
+    /* margin: 0vh 0 5vh 0; */
+    /* height:50%; */
     /* background:red; */
   }
   .arrowImg {
@@ -909,7 +910,7 @@ html {
 
 @media all and (max-width: 500px) {
   .arrowSection {
-    margin: 2vh 0 -4vh 0;
+    margin: -8vh 0 2vh 0;
     /* background:red; */
   }
   .arrowImg {
