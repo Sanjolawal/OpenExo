@@ -718,6 +718,9 @@ html {
   .arrowImg {
     display: none;
   }
+  .splashContainer {
+    height: 110vh;
+  }
 }
 
 @media all and (max-width: 900px) {
@@ -932,8 +935,8 @@ html {
     /* background: red; */
     overflow-x: scroll;
     cursor: all-scroll;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
   }
   .footerContainer::-webkit-scrollbar {
     height: 0px;
