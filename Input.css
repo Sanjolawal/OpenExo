@@ -692,7 +692,7 @@ html {
   }
   footer {
     grid-template-columns: repeat(2, 20% 54%);
-    column-gap: 20%;
+    column-gap: 17%;
   }
 }
 
