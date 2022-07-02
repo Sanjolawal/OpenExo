@@ -692,7 +692,7 @@ html {
   }
   footer {
     grid-template-columns: repeat(2, 20% 54%);
-    column-gap: 17%;
+    column-gap: 20%;
   }
 }
 
@@ -720,6 +720,12 @@ html {
   }
   .splashContainer {
     height: 110vh;
+  }
+  footer {
+    grid-template-columns: repeat(2, 20% 20%);
+    column-gap: 15%;
+    width: 90vw;
+    box-sizing: border-box;
   }
 }
 
