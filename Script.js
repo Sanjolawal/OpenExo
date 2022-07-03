@@ -359,6 +359,7 @@ const mainRoadmap2 = document.querySelector(".mainRoadmap2");
 mainRoadmap2.innerHTML = ` <p class="project">Project <span class="roadmap"> Roadmap</span></p>${newroadmap.join(
   " "
 )}`;
+
 // OUR TEAM SCRIPT SECTION
 
 const teams = [
@@ -376,21 +377,6 @@ const teams = [
     img: "Images/team3.png",
     name: "ABE",
     title: "Lead Developer",
-  },
-  {
-    img: "Images/team4.png",
-    name: "RAYAN",
-    title: "Co-Founder",
-  },
-  {
-    img: "Images/team5.png",
-    name: "DEVIL",
-    title: "Artist",
-  },
-  {
-    img: "Images/team6.png",
-    name: "PARTNER",
-    title: "QnHBC,llc",
   },
 ];
 
