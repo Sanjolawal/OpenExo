@@ -6,6 +6,7 @@ const body = document.querySelector("#body");
 const password = document.querySelector("#password");
 const splashSubmit = document.querySelector("#splashSubmit");
 const splashContainer = document.querySelector("#splashContainer");
+const hamburger = document.querySelector("#hamburger");
 
 const Prevent = (e) => {
   e.preventDefault();
@@ -15,6 +16,9 @@ const Prevent = (e) => {
     body.style.overflow = "visible";
     nav.style.display = "grid";
     header.style.display = "block";
+  }
+  if (password.value === `${1234}#${56}#` && window.innerWidth < 750) {
+    hamburger.style.display = "grid";
   }
 };
 
@@ -57,7 +61,7 @@ exitCarousel.addEventListener("click", GoBack);
 
 // NAVIGATION BAR OPENING AND CLOSING SCRIPT/
 
-const hamburger = document.querySelector("#hamburger");
+// const hamburger = document.querySelector("#hamburger"); hamburger element already selected at line 9
 const closed = document.querySelector("#closed");
 
 const Run = () => {
