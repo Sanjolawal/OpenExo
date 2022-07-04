@@ -220,6 +220,7 @@ html {
   .corp1 {
     color: white;
     margin-bottom: 0;
+    font-size: clamp(18px, 1.5vw, 1.6vw);
   }
   .corp2 {
     font-size: clamp(18px, 1.1vw, 1.2vw);
@@ -617,7 +618,7 @@ html {
   footer {
     top: 0vh;
     display: grid;
-    grid-template-columns: repeat(2, 20% 48%);
+    grid-template-columns: repeat(2, 10% 58%);
     column-gap: 24%;
     font-weight: 200;
     margin: 0 0 0 0;
@@ -656,6 +657,10 @@ html {
   .carousel {
     grid-template-columns: 22.5% 22.5% 55%;
   }
+  footer {
+    grid-template-columns: repeat(2, 10% 64%);
+    column-gap: 20%;
+  }
 }
 @media all and (max-width: 1150px) {
   .mainCards {
@@ -692,8 +697,8 @@ html {
     grid-template-columns: repeat(2, 1fr);
   }
   footer {
-    grid-template-columns: repeat(2, 20% 54%);
-    column-gap: 20%;
+    grid-template-columns: repeat(2, 5% 74%);
+    column-gap: 18%;
   }
 }
 
@@ -723,8 +728,8 @@ html {
     height: 110vh;
   }
   footer {
-    grid-template-columns: repeat(2, 20% 20%);
-    column-gap: 15%;
+    grid-template-columns: repeat(2, 5% 75%);
+    column-gap: 20%;
     width: 90vw;
     box-sizing: border-box;
   }
@@ -739,8 +744,8 @@ html {
     width: 40%;
   }
   footer {
-    grid-template-columns: repeat(2, 20% 64%);
-    column-gap: 12%;
+    grid-template-columns: repeat(2, 5% 75%);
+    column-gap: 20%;
   }
 }
 
