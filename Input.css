@@ -984,12 +984,14 @@ html {
 
 @media all and (max-width: 500px) {
   .arrowSection {
-    margin: -8vh 0 2vh 0;
+    margin: -8vh 0 4vh 0;
     /* background:red; */
+    padding: 0;
   }
-  .arrowImg {
+ 
+  /* .arrowImg {
     height: 46vh;
-  }
+  } */
   .mainCards {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 88%;
