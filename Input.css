@@ -815,8 +815,9 @@ html {
   }
   .headerSecond {
     grid-template-columns: repeat(1, 1fr);
-    height: 100%;
+    height: 90%;
     margin: 10vh 0 6vh 5%;
+    /* background:yellow; */
   }
   .text {
     justify-self: center;
@@ -984,14 +985,16 @@ html {
 
 @media all and (max-width: 500px) {
   .arrowSection {
-    margin: -8vh 0 4vh 0;
-    /* background:red; */
+    margin: -6vh 0 2vh 0;
+    /* background: red; */
     padding: 0;
   }
- 
-  /* .arrowImg {
-    height: 46vh;
-  } */
+
+  .arrowImg {
+    /* height: 46vh; */
+    margin: 0;
+    padding: 0;
+  }
   .mainCards {
     grid-template-columns: repeat(1, 1fr);
     padding-bottom: 88%;
