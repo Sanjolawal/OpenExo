@@ -102,17 +102,10 @@
           </p>
           <button class="headerButton">Mint Now</button>
         </div>
+
         <div class="arrowSection">
-          <!-- <div>
-            <img
-              src="./Images/Planet arrow.svg"
-              alt="human"
-              class="arrowImg"
-              loading="lazy"
-            />
-          </div> -->
           <model-viewer
-            src="Videos/mars_moon.glb"
+            src="Videos/mars_mars.glb"
             alt="Planet"
             auto-rotate
             camera-controls
@@ -121,6 +114,37 @@
             class="arrowImg"
           >
           </model-viewer>
+
+          <model-viewer
+            src="Videos/mars_moon.glb"
+            alt="Planet"
+            auto-rotate
+            camera-controls
+            ar
+            ios-src="Videos/mars_map.glb"
+            class="arrowImgSecond"
+          >
+          </model-viewer>
+
+          <model-viewer
+            src="Videos/mars_mars.glb"
+            alt="Planet"
+            auto-rotate
+            camera-controls
+            ar
+            ios-src="Videos/mars_map.glb"
+            class="arrowImgThird"
+          >
+          </model-viewer>
+        </div>
+
+        <div>
+          <img
+            src="./Images/Planet arrow.svg"
+            alt="human"
+            class="arrowImg2"
+            loading="lazy"
+          />
         </div>
       </div>
       <div class="pointers">
@@ -133,7 +157,7 @@
       <p class="corp">Openexo.io 2022 Corp | Legal Notice</p>
     </header>
 
-    <!-- Carousel section -->
+    <!-- First Planet Carousel section -->
 
     <div class="carousel">
       <div class="carouselCard">
@@ -151,7 +175,67 @@
       <div class="zoomedSpaced">
         <!-- <img src="images/headerBackground.png" alt="planet" class="zoomedImg" /> -->
         <model-viewer
+          src="Videos/mars_mars.glb"
+          alt="Planet"
+          camera-controls
+          ar
+          ios-src="Videos/mars_map.glb"
+          class="zoomedImg"
+          poster="Images/poster.png"
+        >
+        </model-viewer>
+      </div>
+    </div>
+
+    <!-- Second Planet Carousel section -->
+
+    <div class="Secondcarousel">
+      <div class="carouselCard">
+        <p class="exitCarousel">⬅ Go back</p>
+        <img src="Images/team3.png" alt="carousel cards" />
+      </div>
+      <div class="carouselCardInfo">
+        <h1 class="carouselHead">TESTING</h1>
+        <p class="coordinates">
+          0°7'5 S 82°6'4 W<br />
+          2°22'15 S 79°13'18 W
+        </p>
+        <button class="carouselBtn">More info ➡</button>
+      </div>
+      <div class="zoomedSpaced">
+        <!-- <img src="images/headerBackground.png" alt="planet" class="zoomedImg" /> -->
+        <model-viewer
           src="Videos/mars_moon.glb"
+          alt="Planet"
+          camera-controls
+          ar
+          ios-src="Videos/mars_map.glb"
+          class="zoomedImg"
+          poster="Images/poster.png"
+        >
+        </model-viewer>
+      </div>
+    </div>
+
+    <!-- Third Planet Carousel section -->
+
+    <div class="Thirdcarousel">
+      <div class="carouselCard">
+        <p class="exitCarousel">⬅ Go back</p>
+        <img src="Images/team3.png" alt="carousel cards" />
+      </div>
+      <div class="carouselCardInfo">
+        <h1 class="carouselHead">TESTING</h1>
+        <p class="coordinates">
+          0°7'5 S 82°6'4 W<br />
+          2°22'15 S 79°13'18 W
+        </p>
+        <button class="carouselBtn">More info ➡</button>
+      </div>
+      <div class="zoomedSpaced">
+        <!-- <img src="images/headerBackground.png" alt="planet" class="zoomedImg" /> -->
+        <model-viewer
+          src="Videos/mars_mars.glb"
           alt="Planet"
           camera-controls
           ar

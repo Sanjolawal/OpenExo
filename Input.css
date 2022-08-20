@@ -173,18 +173,40 @@ html {
     /* height: 100%; */
     display: grid;
     /* justify-self: center; */
-    /* justify-items: start; */
+    justify-items: start;
     border-radius: 8px;
     align-items: center;
     /* background: yellow; */
+    border: none;
+    grid-template-columns: repeat(3, 95%);
+    overflow-x: scroll;
   }
-  .arrowImg {
+  .arrowSection::-webkit-scrollbar {
+    height: 6px;
+    background: transparent;
+  }
+  .arrowSection::-webkit-scrollbar-thumb {
+    background: white;
+  }
+  .arrowImg,
+  .arrowImgSecond,
+  .arrowImgThird {
     width: 100%;
     height: 60vh;
-    /* margin: 20vh 0 0 0; */
+    /* margin: 0vh 10vw 0 0; */
     object-fit: cover;
     cursor: pointer;
     /* background: white; */
+    /* */
+  }
+  .arrowImg2 {
+    position: absolute;
+    top: 39vh;
+    right: 6vw;
+    object-fit: cover;
+    cursor: pointer;
+    /* z-index:0; */
+    display: none;
   }
 
   .pointers {
@@ -329,7 +351,9 @@ html {
 
   /* Carousel page styling */
 
-  .carousel {
+  .carousel,
+  .Secondcarousel,
+  .Thirdcarousel {
     display: none;
     color: white;
     grid-template-columns: 20% 20% 60%;
@@ -706,8 +730,10 @@ html {
   .headerSecond {
     margin: 5vh 0 2% 7%;
   }
-  .arrowImg {
+  .arrowSection,
+  .arrowImg2 {
     margin: 0;
+    display: none;
   }
   .headerButton {
     padding: 1vh 2vw 1vh 2vw;
@@ -721,9 +747,7 @@ html {
   .faqSummary {
     line-height: 1vh;
   }
-  .arrowImg {
-    display: none;
-  }
+
   .splashContainer {
     height: 110vh;
   }
@@ -829,6 +853,9 @@ html {
   }
   .arrowImg {
     margin: 0;
+  }
+  .arrowImg2 {
+    display: none;
   }
 
   .bi56 {

@@ -7,6 +7,7 @@ const password = document.querySelector("#password");
 const splashSubmit = document.querySelector("#splashSubmit");
 const splashContainer = document.querySelector("#splashContainer");
 const hamburger = document.querySelector("#hamburger");
+const arrowImg2 = document.querySelector(`.arrowImg2`);
 
 const Prevent = (e) => {
   e.preventDefault();
@@ -16,15 +17,17 @@ const Prevent = (e) => {
     body.style.overflow = "visible";
     nav.style.display = "grid";
     header.style.display = "block";
+    arrowImg2.style.display = "block";
   }
   if (password.value === `${1234}#${56}#` && window.innerWidth < 750) {
     hamburger.style.display = "grid";
+    arrowImg2.style.display = "none";
   }
 };
 
 splashSubmit.addEventListener("click", Prevent);
 
-// Carousel script
+// First Carousel script
 
 const arrowImg = document.querySelector(".arrowImg");
 const carousel = document.querySelector(".carousel");
@@ -48,16 +51,98 @@ window.addEventListener("resize", function () {
   }
 });
 
+// Second Carousel script
+
+const Secondcarousel = document.querySelector(".Secondcarousel");
+const arrowImgSecond = document.querySelector(".arrowImgSecond");
+
+const moonSection = () => {
+  if (window.innerWidth < 1000) {
+    header.style.display = "grid";
+    Secondcarousel.style.display = "none";
+  } else {
+    header.style.display = "none";
+    Secondcarousel.style.display = "grid";
+  }
+};
+
+arrowImgSecond.addEventListener("click", moonSection);
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth < 1000) {
+    header.style.display = "grid";
+    Secondcarousel.style.display = "none";
+  }
+});
+
+//  Third Carousel script
+
+const Thirdcarousel = document.querySelector(".Thirdcarousel");
+const arrowImgThird = document.querySelector(".arrowImgThird");
+
+const ThirdSection = () => {
+  if (window.innerWidth < 1000) {
+    header.style.display = "grid";
+    Thirdcarousel.style.display = "none";
+  } else {
+    header.style.display = "none";
+    Thirdcarousel.style.display = "grid";
+  }
+};
+
+arrowImgThird.addEventListener("click", ThirdSection);
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth < 1000) {
+    header.style.display = "grid";
+    Thirdcarousel.style.display = "none";
+  }
+});
+
 // Carousel exit script
 
-const exitCarousel = document.querySelector(".exitCarousel");
+// const exitCarousel = document.querySelector(".exitCarousel");
+
+// const GoBack = () => {
+//   header.style.display = "grid";
+//   carousel.style.display = "none";
+// };
+
+// exitCarousel.addEventListener("click", GoBack);
+
+const exitCarousel = document.querySelectorAll(".exitCarousel");
+console.log(exitCarousel);
 
 const GoBack = () => {
   header.style.display = "grid";
   carousel.style.display = "none";
+  Secondcarousel.style.display = "none";
+  Thirdcarousel.style.display = "none";
 };
 
-exitCarousel.addEventListener("click", GoBack);
+exitCarousel.forEach((each) => {
+  each.addEventListener("click", GoBack);
+});
+
+//  3 PLANET IN THE HEADER SCROLLING SCRIPT
+
+const arrowSection = document.querySelector(`.arrowSection`);
+let count = 0;
+function removeClass() {
+  let width = arrowImg.getBoundingClientRect().width;
+  count = count + 450;
+  if (count > 900) {
+    arrowSection.scrollTo(0, 0);
+    count = 0;
+  } else if (count > 0) {
+    arrowSection.scrollBy({
+      top: 0,
+      left: width,
+      behavior: `smooth`,
+    });
+  }
+}
+arrowImg2.addEventListener(`click`, removeClass);
 
 // NAVIGATION BAR OPENING AND CLOSING SCRIPT/
 
