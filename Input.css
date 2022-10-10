@@ -678,9 +678,9 @@ html {
     height: 110vh;
   }
   .footer {
-    grid-template-columns: repeat(2, 10% 59%);
+    grid-template-columns: repeat(2, 10% 67%);
     align-items: center;
-    column-gap: 30%;
+    column-gap: 22%;
   }
 }
 
@@ -748,7 +748,7 @@ html {
     width: 26%;
   }
   .headerH1 {
-    margin-top: 15vh;
+    margin-top: 13vh;
     width: 86%;
   }
   .headerP1,
@@ -790,7 +790,7 @@ html {
   .bi56 {
     display: block;
     position: absolute;
-    top: 3.6vh;
+    top: 2.5vh;
     right: 5vw;
     cursor: pointer;
   }
@@ -907,5 +907,12 @@ html {
   .footer {
     grid-template-columns: repeat(2, 5% 55%);
     column-gap: 40%;
+  }
+}
+
+@media all and (max-width: 450px) {
+  .bi56,
+  .bi {
+    top: 2.3vh;
   }
 }
