@@ -7,7 +7,6 @@ const password = document.querySelector("#password");
 const splashSubmit = document.querySelector("#splashSubmit");
 const splashContainer = document.querySelector("#splashContainer");
 const hamburger = document.querySelector("#hamburger");
-const arrowImg2 = document.querySelector(`.arrowImg2`);
 
 const Prevent = (e) => {
   e.preventDefault();
@@ -16,149 +15,132 @@ const Prevent = (e) => {
     body.style.height = "";
     body.style.overflow = "visible";
     nav.style.display = "grid";
-    header.style.display = "block";
-    arrowImg2.style.display = "block";
+    header.style.display = "grid";
   }
   if (password.value === `${1234}#${56}#` && window.innerWidth < 750) {
     hamburger.style.display = "grid";
-    arrowImg2.style.display = "none";
   }
 };
 
 splashSubmit.addEventListener("click", Prevent);
 
-// First Carousel script
+// Planets display script
 
-const arrowImg = document.querySelector(".arrowImg");
+const planet = [
+  "Videos/mars_mars.glb",
+  "Videos/mars_moon.glb",
+  "Videos/mars_mars.glb",
+  "Videos/mars_moon.glb",
+  "Videos/mars_mars.glb",
+  "Videos/mars_moon.glb",
+  "Videos/mars_mars.glb",
+  "Videos/mars_moon.glb",
+  "Videos/mars_mars.glb",
+  "Videos/mars_moon.glb",
+];
+
+const newPlanets = planet.map((each) => {
+  return ` <div class="swiper-slide">
+            <model-viewer
+              src=${each}
+              alt="Planet"
+              auto-rotate
+              camera-controls
+              disable-tap    
+              ar
+              ios-src="Videos/mars_map.glb"
+              class="arrowImg"
+            >
+            </model-viewer>
+          </div>`;
+});
+const swiperWrapper = document.querySelector(`.swiper-wrapper`);
+swiperWrapper.innerHTML = newPlanets.join(` `);
+
+// Planet Carousel script
+const wrapper = document.querySelector(`.swiper-wrapper`);
 const carousel = document.querySelector(".carousel");
 
-const ChangeSection = () => {
-  if (window.innerWidth < 1000) {
-    header.style.display = "grid";
-    carousel.style.display = "none";
-  } else {
-    header.style.display = "none";
-    carousel.style.display = "grid";
-  }
-};
+function Test(e) {
+  const activePlanet = e.target.parentElement;
 
-arrowImg.addEventListener("click", ChangeSection);
+  if (activePlanet.classList.contains(`swiper-slide-active`)) {
+    if (window.innerWidth < 1000) {
+      header.style.display = "grid";
+      carousel.style.display = "none";
+    } else {
+      header.style.display = "none";
+      carousel.style.display = "grid";
+      window.scrollTo(0, 0);
+      gsap.from(`.carouselImg`, {
+        width: 5,
+        duration: 2,
+        ease: `bounce`,
+      });
+      gsap.from(`.zoomedImg`, {
+        width: 50,
+        duration: 2,
+        ease: `back`,
+        rotation: -360,
+      });
+    }
+    const zoomedImg = document.querySelector(`.zoomedImg`);
+    zoomedImg.src = activePlanet.firstElementChild.src;
+    // Carousel exit script
 
-window.addEventListener("resize", function () {
-  if (window.innerWidth < 1000) {
-    header.style.display = "grid";
-    carousel.style.display = "none";
-  }
-});
+    const exitCarousel = document.querySelector(".exitCarousel");
 
-// Second Carousel script
+    const GoBack = () => {
+      header.style.display = "grid";
+      carousel.style.display = "none";
+    };
 
-const Secondcarousel = document.querySelector(".Secondcarousel");
-const arrowImgSecond = document.querySelector(".arrowImgSecond");
-
-const moonSection = () => {
-  if (window.innerWidth < 1000) {
-    header.style.display = "grid";
-    Secondcarousel.style.display = "none";
-  } else {
-    header.style.display = "none";
-    Secondcarousel.style.display = "grid";
-  }
-};
-
-arrowImgSecond.addEventListener("click", moonSection);
-
-window.addEventListener("resize", function () {
-  if (window.innerWidth < 1000) {
-    header.style.display = "grid";
-    Secondcarousel.style.display = "none";
-  }
-});
-
-//  Third Carousel script
-
-const Thirdcarousel = document.querySelector(".Thirdcarousel");
-const arrowImgThird = document.querySelector(".arrowImgThird");
-
-const ThirdSection = () => {
-  if (window.innerWidth < 1000) {
-    header.style.display = "grid";
-    Thirdcarousel.style.display = "none";
-  } else {
-    header.style.display = "none";
-    Thirdcarousel.style.display = "grid";
-  }
-};
-
-arrowImgThird.addEventListener("click", ThirdSection);
-
-window.addEventListener("resize", function () {
-  if (window.innerWidth < 1000) {
-    header.style.display = "grid";
-    Thirdcarousel.style.display = "none";
-  }
-});
-
-// Carousel exit script
-
-// const exitCarousel = document.querySelector(".exitCarousel");
-
-// const GoBack = () => {
-//   header.style.display = "grid";
-//   carousel.style.display = "none";
-// };
-
-// exitCarousel.addEventListener("click", GoBack);
-
-const exitCarousel = document.querySelectorAll(".exitCarousel");
-console.log(exitCarousel);
-
-const GoBack = () => {
-  header.style.display = "grid";
-  carousel.style.display = "none";
-  Secondcarousel.style.display = "none";
-  Thirdcarousel.style.display = "none";
-};
-
-exitCarousel.forEach((each) => {
-  each.addEventListener("click", GoBack);
-});
-
-//  3 PLANET IN THE HEADER SCROLLING SCRIPT
-
-const arrowSection = document.querySelector(`.arrowSection`);
-let count = 0;
-function removeClass() {
-  let width = arrowImg.getBoundingClientRect().width;
-  count = count + 450;
-  if (count > 900) {
-    arrowSection.scrollTo(0, 0);
-    count = 0;
-  } else if (count > 0) {
-    arrowSection.scrollBy({
-      top: 0,
-      left: width,
-      behavior: `smooth`,
-    });
+    exitCarousel.addEventListener("click", GoBack);
   }
 }
-arrowImg2.addEventListener(`click`, removeClass);
+
+wrapper.addEventListener(`click`, Test);
+
+window.addEventListener("resize", function () {
+  if (window.innerWidth < 1000) {
+    header.style.display = "grid";
+    carousel.style.display = "none";
+  }
+});
 
 // NAVIGATION BAR OPENING AND CLOSING SCRIPT/
 
 // const hamburger = document.querySelector("#hamburger"); hamburger element already selected at line 9
 const closed = document.querySelector("#closed");
+const navThird = document.querySelector(`.navThird`);
 
 const Run = () => {
   if (window.innerWidth < 750) {
     document.body.style.height = "100vh";
     document.body.style.overflow = "hidden";
-    nav.style.height = "100vh";
+    // nav.style.height = "65vh";
+    gsap.from(`#nav`, {
+      duration: 1,
+      y: 450,
+      ease: `back`,
+    });
+    gsap.from(`.navMenu, .navMenu1`, {
+      delay: 0.5,
+      opacity: 0,
+      duration: 0.5,
+      x: -150,
+      stagger: 0.2,
+    });
     nav.style.background = "rgb(215,0,255, 1)";
+    nav.style.zIndex = 70;
     const navContainer = document.querySelector("#navContainer");
     navContainer.style.display = "block";
-    navContainer.style.marginTop = "-35vh";
+    navContainer.style.marginTop = `8vh`;
+    navContainer.style.marginBottom = `10vh`;
+    navThird.style.display = "block";
+    navThird.style.marginBottom = `30vh`;
     closed.style.display = "grid";
+    closed.style.zIndex = 100;
     hamburger.style.display = "none";
   }
 };
@@ -176,24 +158,11 @@ const Hide = () => {
     const navContainer = document.querySelector("#navContainer");
     console.log(navContainer);
     navContainer.style.display = "none";
+    navThird.style.display = "none";
   }
 };
 
 closed.addEventListener("click", Hide);
-
-// window.addEventListener("resize", function () {
-//   if (window.innerWidth < 750) {
-//     document.body.style.height = "";
-//     document.body.style.overflow = "visible";
-//     nav.style.height = "";
-//     nav.style.background = "";
-//     closed.style.display = "none";
-//     hamburger.style.display = "grid";
-//     const navContainer = document.querySelector("#navContainer");
-//     console.log(navContainer);
-//     navContainer.style.display = "none";
-//   }
-// });
 
 // FAQS and Team Navigations SCROLLING SCRIPT
 
@@ -211,6 +180,7 @@ const Fix = () => {
     const navContainer = document.querySelector("#navContainer");
     console.log(navContainer);
     navContainer.style.display = "none";
+    navThird.style.display = "none";
   }
 };
 ab.addEventListener("click", Fix);
@@ -223,6 +193,11 @@ const navMenu1 = document.querySelector("#navMenu1");
 
 const showPopUp = () => {
   popUpCon.style.display = "grid";
+  gsap.from(`#popUpCon`, {
+    duration: 1,
+    y: -450,
+    ease: `back`,
+  });
 };
 
 navMenu1.addEventListener("click", showPopUp);
@@ -234,208 +209,34 @@ const hidePopUp = () => {
 
 popUpClosed.addEventListener("click", hidePopUp);
 
-// Cards section script and info
-
-// const data = [
-//   {
-//     name: "@johny",
-//     title: "Lorem Ipsum",
-//     bid: "Current Bid",
-//     price: "0.005ETH",
-//     img: "./Images/red love.svg",
-//     cta: "Buy Now",
-//   },
-//   {
-//     name: "@johny",
-//     title: "Lorem Ipsum",
-//     bid: "Current Bid",
-//     price: "0.005ETH",
-//     img: "./Images/red love.svg",
-//     cta: "Buy Now",
-//   },
-//   {
-//     name: "@johny",
-//     title: "Lorem Ipsum",
-//     bid: "Current Bid",
-//     price: "0.005ETH",
-//     img: "./Images/red love.svg",
-//     cta: "Buy Now",
-//   },
-//   {
-//     name: "@johny",
-//     title: "Lorem Ipsum",
-//     bid: "Current Bid",
-//     price: "0.005ETH",
-//     img: "./Images/red love.svg",
-//     cta: "Buy Now",
-//   },
-//   {
-//     name: "@johny",
-//     title: "Lorem Ipsum",
-//     bid: "Current Bid",
-//     price: "0.005ETH",
-//     img: "./Images/red love.svg",
-//     cta: "Buy Now",
-//   },
-//   {
-//     name: "@johny",
-//     title: "Lorem Ipsum",
-//     bid: "Current Bid",
-//     price: "0.005ETH",
-//     img: "./Images/red love.svg",
-//     cta: "Buy Now",
-//   },
-//   {
-//     name: "@johny",
-//     title: "Lorem Ipsum",
-//     bid: "Current Bid",
-//     price: "0.005ETH",
-//     img: "./Images/red love.svg",
-//     cta: "Buy Now",
-//   },
-//   {
-//     name: "@johny",
-//     title: "Lorem Ipsum",
-//     bid: "Current Bid",
-//     price: "0.005ETH",
-//     img: "./Images/red love.svg",
-//     cta: "Buy Now",
-//   },
-//   {
-//     name: "@johny",
-//     title: "Lorem Ipsum",
-//     bid: "Current Bid",
-//     price: "0.005ETH",
-//     img: "./Images/red love.svg",
-//     cta: "Buy Now",
-//   },
-// ];
-// const newdata = data.map((each) => {
-//   return `
-//        <div class="singleCards">
-//         <div class="cardsCon">
-//           <artcile>
-//             <p class="Opacity">${each.name}</p>
-//             <p class="noOpacity">${each.title}</p>
-//           </artcile>
-//           <section>
-//             <p class="Opacity1">${each.bid}</p>
-//             <p class="noOpacity1">${each.price}</p>
-//           </section>
-//         </div>
-//         <div class="mainBtn">
-//           <img src="./Images/red love.svg" alt="redlove" loading="lazy" />
-//           <button class="cardsBtn">${each.cta}</button>
-//         </div>
-//       </div> `;
-// });
-
-// const mainCards = document.querySelector("#mainCards");
-
-// mainCards.innerHTML = newdata.join(" ");
-
-// FAQ SECTION SCRIPT
-
-// let reviews = [
-//   {
-//     qos: "1. Lorem ipsum dolor sit amet.",
-//     img: "Images/Up arrow.svg",
-//     ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-//             augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
-//             consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
-//   },
-//   {
-//     qos: "1. Lorem ipsum dolor sit amet.",
-//     img: "Images/Up arrow.svg",
-//     ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-//             augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
-//             consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
-//   },
-//   {
-//     qos: "1. Lorem ipsum dolor sit amet.",
-//     img: "Images/Up arrow.svg",
-//     ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-//             augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
-//             consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
-//   },
-//   {
-//     qos: "1. Lorem ipsum dolor sit amet.",
-//     img: "Images/Up arrow.svg",
-//     ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-//             augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
-//             consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
-//   },
-//   {
-//     qos: "1. Lorem ipsum dolor sit amet.",
-//     img: "Images/Up arrow.svg",
-//     ans: ` Ans. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-//             augue scelerisque fringilla congue. Lorem ipsum dolor sit amet,
-//             consectetur adipiscing elit. Ut augue scelerisque fringilla congue.`,
-//   },
-// ];
-
-// let newReviews = reviews.map((each) => {
-//   return `
-//     <div class="faqBoxcon">
-//       <div class="faqBox" id="faqBox">
-//         <div class="faqContainer">
-//           <p class="faqDetails">${each.qos}</p>
-//           <img
-//             src="${each.img}"
-//             alt="Up arrow"
-//             loading="lazy"
-//             class="upArrow"
-//             id="upArrow"
-//           />
-//         </div>
-//       </div>
-//         <p class="faqSummary" id="faqSummary">
-//            ${each.ans}
-//           </p>
-//     </div>`;
-// });
-
-// const overallFaq = document.querySelector(".overallFaq");
-
-// overallFaq.innerHTML = newReviews;
-
-// const faqBoxcon = document.querySelectorAll(".faqBoxcon");
-
-// faqBoxcon.forEach((each) => {
-//   each.addEventListener("click", function (e) {
-//     console.log(e.currentTarget.lastElementChild);
-//     e.currentTarget.lastElementChild.classList.toggle("faqSummary2");
-//   });
-// });
-
 // Roadmap section script
 
 const roadmap = [
   {
     phase: "Phase 1",
-    info: "50GH of Hash power activation",
+    info: `2022 4Q <br> Launch of Openexo.io V1 <br> Release of Mars NFT’s on the Cardano blockchain`,
   },
   {
     phase: "Phase 2",
-    info: "150GH of Hash power activation",
+    info: `2023 Q1 <br> User Account V2 <br> Planetary NFT drop`,
   },
   {
     phase: "Phase 3",
-    info: "300GH of Hash power activation",
+    info: `2023 Q2 <br> Functionality Updates V2 <br> Cross platform blockchain <br> interoperability V1`,
   },
   {
     phase: "Phase 4",
-    info: "500GH of Hash power activation",
+    info: `2023 Q4`,
   },
   {
     phase: "Phase 5",
-    info: "Build GMS's own mining facility with GMS fams",
+    info: `2024 02`,
   },
 ];
 let newroadmap = roadmap.map((each) => {
   return `
-  <div class="roadmapMobile">
-        <h1 class="roadmapHead">${each.phase}</h1>
+  <div class="roadmapMobile" data-aos="zoom-in" data-aos-duration="3000" >
+        <h1 class="roadmapHead" >${each.phase}</h1>
         <p class="roadPar">${each.info}</p>
       </div>  `;
 });
@@ -467,7 +268,7 @@ const teams = [
 
 let newteam = teams.map((each) => {
   return `
-   <section class="teamCard">
+   <section class="teamCard" data-aos="slide-right" data-aos-duration="3500" >
           <img
             src="${each.img}"
             alt="team image"

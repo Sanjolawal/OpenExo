@@ -7,6 +7,8 @@
     <title>Openexo.io</title>
     <link rel="shortcut icon" href="./Images/logo.png" />
     <link rel="stylesheet" type="text/css" href="Input.css" />
+
+    <!-- Google fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
       rel="stylesheet"
@@ -15,13 +17,29 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Google Icons -->
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+
+    <!-- swiperjs library -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+
+    <!-- Aosjs library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
+
   <body id="body">
     <!-- SPLASH PAGE SECTION -->
 
     <div class="splashContainer" id="splashContainer">
       <div class="splashContainer2">
-        <!-- <img src="Images/logo.png" alt="Logo" class="splashImg" /> -->
         <video
           src="Videos/animation_video_colored (1).mp4"
           autoplay
@@ -90,79 +108,40 @@
           d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
         />
       </svg>
-      <div class="headerSecond">
-        <div class="text">
-          <!-- <div> -->
-          <h1 class="headerH1">Openexo.io</h1>
-          <p class="headerP1">
-            We are building the world’s first exoplanet metaverse.<br />
-            Explore and purchase history now.<br /><br />
-            Each planet you explore contains unique property that you can own,
-            rent or trade.
-          </p>
-          <button class="headerButton">Mint Now</button>
+      <h1 class="headerH1">Explore and own your piece of history</h1>
+      <p class="headerP1">
+        We are building the world’s first exoplanet metaverse. Each planet
+        contains a limited amount of unique NFT properties with factual data
+        sets of historical relevance.
+      </p>
+      <button class="headerBtn">Mint Now</button>
+
+      <!-- Swiper -->
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper"></div>
+      </div>
+
+      <div class="direction">
+        <div class="swiper-button-prevUnique">
+          <span class="material-symbols-outlined" id="headerIcon1">
+            arrow_back_ios
+          </span>
         </div>
-
-        <div class="arrowSection">
-          <model-viewer
-            src="Videos/mars_mars.glb"
-            alt="Planet"
-            auto-rotate
-            camera-controls
-            ar
-            ios-src="Videos/mars_map.glb"
-            class="arrowImg"
-          >
-          </model-viewer>
-
-          <model-viewer
-            src="Videos/mars_moon.glb"
-            alt="Planet"
-            auto-rotate
-            camera-controls
-            ar
-            ios-src="Videos/mars_map.glb"
-            class="arrowImgSecond"
-          >
-          </model-viewer>
-
-          <model-viewer
-            src="Videos/mars_mars.glb"
-            alt="Planet"
-            auto-rotate
-            camera-controls
-            ar
-            ios-src="Videos/mars_map.glb"
-            class="arrowImgThird"
-          >
-          </model-viewer>
-        </div>
-
-        <div>
-          <img
-            src="./Images/Planet arrow.svg"
-            alt="human"
-            class="arrowImg2"
-            loading="lazy"
-          />
+        <div class="swiper-button-nextUnique">
+          <span class="material-symbols-outlined" id="headerIcon2">
+            arrow_forward_ios
+          </span>
         </div>
       </div>
-      <div class="pointers">
-        <div class="pointerCon">
-          <hr class="pointer1" />
-          <hr class="pointer" />
-          <hr class="pointer" />
-        </div>
-      </div>
-      <p class="corp">Openexo.io 2022 Corp | Legal Notice</p>
     </header>
 
-    <!-- First Planet Carousel section -->
+    <!--  Planet Carousel section -->
 
     <div class="carousel">
       <div class="carouselCard">
         <p class="exitCarousel">⬅ Go back</p>
-        <img src="Images/team3.png" alt="carousel cards" />
+        <img src="Images/team3.png" alt="carousel cards" class="carouselImg" />
       </div>
       <div class="carouselCardInfo">
         <h1 class="carouselHead">TESTING</h1>
@@ -173,12 +152,12 @@
         <button class="carouselBtn">More info ➡</button>
       </div>
       <div class="zoomedSpaced">
-        <!-- <img src="images/headerBackground.png" alt="planet" class="zoomedImg" /> -->
         <model-viewer
           src="Videos/mars_mars.glb"
           alt="Planet"
           camera-controls
           ar
+          disable-tap
           ios-src="Videos/mars_map.glb"
           class="zoomedImg"
           poster="Images/poster.png"
@@ -187,63 +166,67 @@
       </div>
     </div>
 
-    <!-- Second Planet Carousel section -->
-
-    <div class="Secondcarousel">
-      <div class="carouselCard">
-        <p class="exitCarousel">⬅ Go back</p>
-        <img src="Images/team3.png" alt="carousel cards" />
-      </div>
-      <div class="carouselCardInfo">
-        <h1 class="carouselHead">TESTING</h1>
-        <p class="coordinates">
-          0°7'5 S 82°6'4 W<br />
-          2°22'15 S 79°13'18 W
-        </p>
-        <button class="carouselBtn">More info ➡</button>
-      </div>
-      <div class="zoomedSpaced">
-        <!-- <img src="images/headerBackground.png" alt="planet" class="zoomedImg" /> -->
-        <model-viewer
-          src="Videos/mars_moon.glb"
-          alt="Planet"
-          camera-controls
-          ar
-          ios-src="Videos/mars_map.glb"
-          class="zoomedImg"
-          poster="Images/poster.png"
+    <div class="about">
+      <p class="aboutP1">
+        Openexo is a multiplanetary project that encompasses real factual data
+        of land, past, present and future, of history made and in the making all
+        into a very unique, value based NFT design.
+      </p>
+      <img src="Images/openexoMap.png" alt="aboutImg" class="aboutImg" />
+      <p class="aboutP2">
+        Each NFT represents a virtual land-owning opportunity, with specific
+        coordinates, data and characteristics. Openexo’s NFT’s are limited,
+        unique and available with factual historical data all stored on the
+        Cardano blockchain.
+      </p>
+      <div class="timeline">
+        <img
+          src="Images/past.png"
+          alt="img"
+          class="timeImg"
+          data-aos="slide-right"
+          data-aos-duration="4000"
+        />
+        <section
+          class="timeSection"
+          data-aos="fade-in"
+          data-aos-duration="3000"
         >
-        </model-viewer>
+          <h1 class="timeH1">Past</h1>
+          <p class="timeP1">
+            Land parcels with legendary historical meanings are available to
+            those interested in owning some of the very best NFT’s offered by
+            Openexo. When you own these NFT’s, you unlock future available lamd
+            opportunities not available to any other.
+          </p>
+        </section>
       </div>
-    </div>
-
-    <!-- Third Planet Carousel section -->
-
-    <div class="Thirdcarousel">
-      <div class="carouselCard">
-        <p class="exitCarousel">⬅ Go back</p>
-        <img src="Images/team3.png" alt="carousel cards" />
+      <div class="timeline1" data-aos="slide-down" data-aos-duration="4000">
+        <section class="timeSection">
+          <h1 class="timeH1">Present</h1>
+          <p class="timeP1">
+            The goal of the human race is to be a multiplanetary species, until
+            this is a reality, land parcels available today represent where
+            humans have visited, where rovers have been, where machines have
+            traveled. These parcels will undoubtedly be discovered and cherished
+            as items to hold on to.
+          </p>
+        </section>
+        <img src="Images/present.png" alt="img" class="timeImg" />
       </div>
-      <div class="carouselCardInfo">
-        <h1 class="carouselHead">TESTING</h1>
-        <p class="coordinates">
-          0°7'5 S 82°6'4 W<br />
-          2°22'15 S 79°13'18 W
-        </p>
-        <button class="carouselBtn">More info ➡</button>
-      </div>
-      <div class="zoomedSpaced">
-        <!-- <img src="images/headerBackground.png" alt="planet" class="zoomedImg" /> -->
-        <model-viewer
-          src="Videos/mars_mars.glb"
-          alt="Planet"
-          camera-controls
-          ar
-          ios-src="Videos/mars_map.glb"
-          class="zoomedImg"
-          poster="Images/poster.png"
-        >
-        </model-viewer>
+      <div class="timeline" data-aos="slide-up" data-aos-duration="4000">
+        <img src="Images/future.png" alt="img" class="timeImg" />
+        <section class="timeSection">
+          <h1 class="timeH1">Future</h1>
+          <p class="timeP1">
+            With all the excitement around the globe, who really knows where we
+            will go, what we will see, the future is unknown. These land parcels
+            are for those who have interest in areas of our solar system that
+            humans may visit. Those who own these land parcels will have the
+            “special” benefit of being notified to own “new” parcels with
+            updated information.
+          </p>
+        </section>
       </div>
     </div>
 
@@ -256,8 +239,15 @@
         <li class="navMenu">Explore</li>
         <li class="navMenu"><a href="#ROADMAP" class="a">Roadmap</a></li>
         <li class="navMenu">Stats</li>
-        <li class="navMenu1" id="navMenu1">Connect Wallet</li>
+        <li class="navMenu">
+          Cart
+          <sup class="sup"> 1</sup>
+        </li>
       </ul>
+      <div class="navThird">
+        <p class="navMenu1" id="navMenu1">Connect Wallet</p>
+        <p class="navMenu1" id="login">Login</p>
+      </div>
     </nav>
 
     <!-- Connect wallet popup page -->
@@ -373,27 +363,10 @@
       </div>
     </div>
 
-    <!-- \\cards section -->
-    <!-- <main class="cardhead">
-      <div>
-        <h1 class="cardH1">Available <span class="cardSpan1"> Land</span></h1>
-        <p class="cardP1">Worlds First Exoplanet Marketplace</p>
-      </div>
-    </main> -->
-
-    <!-- Cards section minus FAQ -->
-
-    <!-- <div class="mainCards" id="mainCards"></div> -->
-
-    <!-- <faq section html -->
-
-    <!-- <h1 class="faqH1" id="FAQS">FAQs</h1>
-    <div class="overallFaq"></div> -->
-
     <!-- <ROADMAP SECTION -->
 
     <div class="mainRoadmap" id="ROADMAP">
-      <img src="Images/Raodmap.svg" alt="project image" class="roadmapImg" />
+      <img src="Images/Raodmap.png" alt="project image" class="roadmapImg" />
     </div>
     <div class="mainRoadmap2" id="ROADMAP"></div>
 
@@ -408,20 +381,19 @@
     <!-- Footer section -->
 
     <footer>
-      <!-- <nav id="nav" class="navDiv"> -->
-      <img src="Images/logo.png" alt="FAQLOGO" class="navLogo" />
-      <ul class="footerContainer">
-        <li class="faqMenu">Legal Notice</li>
-        <li class="faqMenu">About</li>
-        <li class="faqMenu"><a href="#TEAM" class="ab">Team</a></li>
-        <li class="faqMenu"><a href="#ROADMAP" class="a">Roadmap</a></li>
-        <li class="faqMenu">Company</li>
-        <li class="faqMenu">Terms</li>
-      </ul>
-      <!-- </nav> -->
+      <div class="footer">
+        <img src="Images/logo.png" alt="FAQLOGO" class="navLogo" />
+        <ul class="footerContainer">
+          <li class="faqMenu">Legal</li>
+          <li class="faqMenu">Project</li>
+          <li class="faqMenu"><a href="#TEAM" class="ab">Team</a></li>
+          <li class="faqMenu">About us</li>
+        </ul>
+      </div>
     </footer>
 
     <script src="Script.js"></script>
+
     <!--Imports a model-viewer JavaScript code -->
     <!--It helps to handle how the 3D Object would be displayed -->
     <script
@@ -432,5 +404,43 @@
       nomodule
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
     ></script>
+
+    <!--Imports a swiperjs library JavaScript code -->
+    <!--It helps to handle planet carousel in the header region  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Intializing the sccript -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: `1.5`,
+        breakpoints: {
+          1000: {
+            slidesPerView: `3`,
+          },
+        },
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2,
+          slideShadows: true,
+        },
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-nextUnique",
+          prevEl: ".swiper-button-prevUnique",
+        },
+      });
+    </script>
+    <!-- AOS library -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- GSAP library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
   </body>
 </html>

@@ -7,6 +7,7 @@ body {
   background: black;
   height: 100vh;
   overflow-y: hidden;
+  /* overflow-x: hidden; */
 }
 html {
   scroll-behavior: smooth;
@@ -25,7 +26,6 @@ html {
   .splashContainer {
     background: black;
     display: grid;
-    /* display: none; */
     justify-content: center;
     height: 100vh;
     align-items: center;
@@ -77,13 +77,14 @@ html {
     top: 0vh;
     display: none;
     /* display: grid; */
-    grid-template-columns: repeat(2, 20% 48%);
-    column-gap: 24%;
+    grid-template-columns: repeat(3, 15% 42% 21%);
+    column-gap: 11%;
     font-weight: 200;
     margin: 0 0 0 0;
     padding: 0 0 0 4%;
     width: 96%;
     color: white;
+    align-items: center;
   }
 
   .navContainer {
@@ -91,7 +92,6 @@ html {
     align-items: center;
     list-style: none;
     justify-content: space-between;
-    margin: 0 0 1.2vh 0%;
   }
   .a,
   .ab {
@@ -112,10 +112,29 @@ html {
     font-family: "Inter", sans-serif;
     font-weight: 500;
   }
+  .navMenu1 {
+    font-family: `Inter`;
+    font-weight: 700;
+  }
 
   .navMenu:hover,
   .navMenu1:hover {
     border: 2px solid rgb(219, 0, 255, 1);
+  }
+  .sup {
+    background: rgb(255, 159, 14);
+    font-family: `Inter`;
+    font-weight: 700;
+    width: fit-content;
+    padding: 0 0.4vw 0 0.4vw;
+    border-radius: 45%;
+  }
+  .navThird {
+    display: flex;
+  }
+  #login {
+    background: rgb(219, 0, 255, 1);
+    margin-left: 0.5vw;
   }
 
   .bi56,
@@ -126,71 +145,129 @@ html {
 
   /* Header section */
 
-  .header {
+  .header,
+  .about {
+    display: none;
     color: white;
     margin: 0;
     padding: 1vh 0 1vh 0%;
+    /* display: grid; */
+    justify-items: center;
+  }
+  .about {
+    display: grid;
+  }
+
+  .headerH1 {
+    margin-top: 20vh;
+    text-align: center;
+    font-family: `inter`;
+    font-weight: 700;
+    font-size: clamp(33px, 3.8vw, 3.9vw);
+  }
+  .headerP1,
+  .aboutP1,
+  .aboutP2 {
+    text-align: center;
+    font-family: `inter`;
+    font-weight: 600;
+    font-size: clamp(18px, 1.45vw, 1.5vw);
+    color: rgb(255, 255, 255, 0.8);
+    width: 64vw;
+    margin-top: -1vh;
+  }
+  .headerBtn {
+    font-family: `inter`;
+    font-weight: 700;
+    font-size: clamp(14px, 1.2vw, 1.3vw);
+    padding: 2vh 3vw 2vh 3vw;
+    text-align: center;
+    border: none;
+    border-radius: 8vw;
+    background: #db00ff;
+    color: white;
+    width: fit-content;
+    margin-top: 2vh;
+    cursor: pointer;
+  }
+  .swiper {
+    width: 100%;
+    margin: 6vh 0 5vh 0;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+  }
+  .direction {
+    display: flex;
+    margin: 2vh;
+  }
+  #headerIcon1,
+  #headerIcon2 {
+    background: rgb(255, 255, 255, 0.3);
+    margin: 0.5vh;
+    padding: 2vh;
+    border-radius: 50%;
+  }
+  #headerIcon1:hover,
+  #headerIcon2:hover {
+    background: #db00ff;
+    cursor: pointer;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white !important;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
     display: none;
   }
-  .headerSecond {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 89%;
-    margin: 14vh 0 13% 5%;
-    padding: 0 0 4vh 0;
-    /* background: red;
-     */
-  }
-  .text {
-    display: grid;
-    align-items: start;
-    /* background: green; */
-  }
-  .headerH1 {
-    font-size: clamp(60px, 5.2vw, 5.6vw);
-    font-family: "Inter", sans-serif;
-    font-weight: 800;
-  }
-  .headerP1 {
-    font-family: "Inter", sans-serif;
-    font-weight: 500;
-    font-size: clamp(23px, 1.5vw, 1.6vw);
-  }
-  .headerButton {
-    font-family: "Inter", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    display: grid;
-    width: 24%;
-    padding: 2vh 2vw 2vh 2vw;
+  .direction1 {
+    background: #db00ff;
+    width: fit-content;
+    padding: 2vh;
     border: none;
-    border-radius: 30px;
-    color: white;
-    background: rgb(219, 0, 255);
+    border-radius: 50%;
   }
-  .arrowSection {
-    width: 100%;
-    /* height: 100%; */
+  .aboutP1,
+  .aboutP2 {
+    width: 70vw;
+  }
+  .aboutImg {
+    width: 70%;
+    margin: 0 0 5vh 0;
+  }
+  .aboutP2 {
+    text-align: start;
+    margin-bottom: 8vh;
+  }
+  .timeline1,
+  .timeline {
     display: grid;
-    /* justify-self: center; */
-    justify-items: start;
-    border-radius: 8px;
+    grid-template-columns: repeat(2, 34% 66%);
     align-items: center;
-    /* background: yellow; */
-    border: none;
-    grid-template-columns: repeat(3, 95%);
-    overflow-x: scroll;
+    margin: 6vh 0 0 0;
+    width: 71%;
+    column-gap: 2%;
   }
-  .arrowSection::-webkit-scrollbar {
-    height: 6px;
-    background: transparent;
+  .timeline1 {
+    grid-template-columns: repeat(2, 66% 34%);
   }
-  .arrowSection::-webkit-scrollbar-thumb {
-    background: white;
+  .timeH1 {
+    font-family: `inter`;
+    font-weight: 600;
+    font-size: clamp(19px, 1.45vw, 1.5vw);
   }
-  .arrowImg,
-  .arrowImgSecond,
-  .arrowImgThird {
+  .timeP1 {
+    font-family: `inter`;
+    font-weight: 500;
+    font-size: clamp(16px, 1.2vw, 1.25vw);
+    color: rgb(255, 255, 255, 0.8);
+    line-height: 5vh;
+  }
+
+  .arrowImg {
     width: 100%;
     height: 60vh;
     /* margin: 0vh 10vw 0 0; */
@@ -199,38 +276,7 @@ html {
     /* background: white; */
     /* */
   }
-  .arrowImg2 {
-    position: absolute;
-    top: 39vh;
-    right: 6vw;
-    object-fit: cover;
-    cursor: pointer;
-    /* z-index:0; */
-    display: none;
-  }
 
-  .pointers {
-    display: grid;
-    width: 82%;
-    justify-items: end;
-    margin: 0vh 0 4% 0;
-  }
-  .pointerCon {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 26%;
-    column-gap: 14%;
-  }
-  .pointer,
-  .pointer1 {
-    width: 100%;
-    padding: 0.5vh;
-    border-radius: 20px;
-  }
-  .pointer1 {
-    background-color: white;
-  }
-  .corp,
   .corp1,
   .corp2 {
     font-family: "Inter", sans-serif;
@@ -351,9 +397,7 @@ html {
 
   /* Carousel page styling */
 
-  .carousel,
-  .Secondcarousel,
-  .Thirdcarousel {
+  .carousel {
     display: none;
     color: white;
     grid-template-columns: 20% 20% 60%;
@@ -416,163 +460,6 @@ html {
     cursor: pointer;
   }
 
-  /* cards section */
-  .cardhead {
-    padding: 9% 0 0 0;
-    color: white;
-    display: grid;
-  }
-  .cardH1 {
-    text-align: center;
-    font-weight: 700;
-    font-size: clamp(34px, 2.8vw, 2.9vw);
-    font-family: "poppins", sans-serif;
-    font-weight: 700;
-  }
-  .cardSpan1 {
-    color: rgb(219, 0, 255);
-  }
-  .cardP1 {
-    text-align: center;
-    opacity: 0.6;
-    font-size: clamp(18px, 1.8vw, 1.9vw);
-    padding: 0 0 2% 0;
-    font-family: "inter", sans-serif;
-    font-weight: 400;
-  }
-  .mainCards {
-    margin: 0 12.5% 0 12.5%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 2%;
-    column-gap: 1%;
-    padding-bottom: 12%;
-  }
-  .singleCards {
-    background: rgba(255, 255, 255, 0.2);
-    width: 100%;
-    padding: 91.6% 0% 0% 0%;
-    border-radius: 10px;
-    color: white;
-    margin: 0;
-  }
-  .cardsCon {
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-    padding: 0 1vw 0 1vw;
-  }
-  .Opacity,
-  .noOpacity {
-    margin: 0;
-    padding: 0;
-  }
-  .noOpacity {
-    margin: 2vh 0 4vh 0;
-  }
-  .Opacity {
-    opacity: 0.5;
-    font-family: "poppins", sans-serif;
-    font-weight: 500;
-    font-size: clamp(14px, 1.4vw, 1.5vw);
-  }
-  .noOpacity {
-    font-family: "poppins", sans-serif;
-    font-weight: 700;
-    font-size: clamp(14px, 1.4vw, 1.5vw);
-  }
-  .Opacity1,
-  .noOpacity1 {
-    margin: 0;
-    padding: 0;
-  }
-  .Opacity1 {
-    font-family: "poppins", sans-serif;
-    font-weight: 500;
-    font-size: clamp(11px, 0.9vw, 1.1vw);
-    opacity: 0.5;
-    text-align: end;
-  }
-  .noOpacity1 {
-    font-family: "poppins", sans-serif;
-    font-weight: 700;
-    font-size: clamp(14px, 1.4vw, 1.5vw);
-  }
-  .mainBtn {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0 0vw 0 1vw;
-    margin-bottom: 3vh;
-  }
-  .cardsBtn {
-    color: white;
-    font-size: clamp(14px, 1.4vw, 1.6vw);
-    font-family: "poppins", sans-serif;
-    font-weight: 600;
-    background: rgb(219, 0, 255);
-    text-align: center;
-    padding: 1vh 30% 1vh 30%;
-    margin-left: 2%;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-  .faqH1 {
-    font-family: "inter", sans-serif;
-    text-align: center;
-    font-weight: 700;
-    font-size: clamp(34px, 3vw, 3.1vw);
-    color: white;
-    margin-bottom: 2.8%;
-  }
-  .faqBoxcon {
-    display: grid;
-  }
-  .faqBox {
-    display: grid;
-    background: rgb(255, 255, 255, 0.2);
-    width: 60%;
-    margin-bottom: 0.4vh;
-    padding: 0vh 0 0vh 1.4%;
-    /* background: red; */
-    justify-self: center;
-    justify-items: start;
-    color: white;
-    border-radius: 6px 6px 0 0;
-  }
-
-  .faqContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 95% 5%);
-    width: 96%;
-    align-items: center;
-    /* background: yellow; */
-  }
-  /* .faqBox2 {
-    margin: 0 20% 0 20%;
-  } */
-  .upArrow {
-    cursor: pointer;
-  }
-  /* .faqSummarycon {
-    display: grid;
-  } */
-
-  .faqSummary {
-    display: none;
-    background: rgb(255, 255, 255, 0.5);
-    justify-self: center;
-    width: 60%;
-    margin: 0.2vh 0% 1.5% 0%;
-    padding: 2vh 0 2vh 1.4%;
-    opacity: 0.6;
-    line-height: 4vh;
-    color: white;
-  }
-  .faqSummary2 {
-    display: block;
-  }
   .mainRoadmap {
     /* color: white; */
     /* background: red; */
@@ -604,12 +491,10 @@ html {
   }
 
   .teamSection {
-    /* background: red; */
     display: grid;
     padding-bottom: 3vh;
   }
   .teamSubsection {
-    /* background: yellow; */
     display: grid;
     width: 66%;
     grid-template-columns: repeat(3, 1fr);
@@ -640,15 +525,21 @@ html {
     margin: 0;
   }
   footer {
+    padding: 3vh 2.5% 3vh 5.5%;
+    background: rgb(255, 255, 255, 0.1);
+  }
+  .footer {
     top: 0vh;
     display: grid;
-    grid-template-columns: repeat(2, 10% 58%);
-    column-gap: 24%;
+    grid-template-columns: repeat(2, 10% 38%);
+    column-gap: 52%;
     font-weight: 200;
     margin: 0 0 0 0;
-    padding: 0 0 0 4%;
+    padding: 0 0 0 0%;
     width: 96%;
     color: white;
+    border: 3px solid black;
+    background: rgb(0, 0, 0, 0.1);
   }
   .footerContainer {
     display: flex;
@@ -669,8 +560,8 @@ html {
 }
 
 @media all and (max-width: 1270px) {
-  .headerButton {
-    width: 30%;
+  .aboutImg {
+    width: 70%;
   }
   .splashContainer2 {
     width: 54%;
@@ -681,16 +572,28 @@ html {
   .carousel {
     grid-template-columns: 22.5% 22.5% 55%;
   }
-  footer {
-    grid-template-columns: repeat(2, 10% 64%);
-    column-gap: 20%;
+  .timeline1,
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(2, 34% 66%);
+    align-items: center;
+    margin: 6vh 0 0 0;
+    width: 76%;
+    column-gap: 0%;
   }
-}
-@media all and (max-width: 1150px) {
-  .mainCards {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 1%;
-    padding-bottom: 18%;
+  .timeline1 {
+    grid-template-columns: repeat(2, 66% 34%);
+    column-gap: 4%;
+  }
+  .timeImg {
+    width: 80%;
+  }
+  .timeP1 {
+    line-height: 3.5vh;
+  }
+  .footer {
+    grid-template-columns: repeat(2, 10% 49%);
+    column-gap: 40%;
   }
 }
 @media all and (max-width: 1120px) {
@@ -698,17 +601,11 @@ html {
     width: 70%;
   }
   .navDiv {
-    grid-template-columns: repeat(2, 20% 54%);
-    column-gap: 20%;
-  }
-  .headerSecond {
-    margin: 12vh 0 20% 7%;
+    grid-template-columns: repeat(3, 15% 44% 25%);
+    column-gap: 8%;
   }
   .headerH1 {
-    font-size: 8vw;
-  }
-  .headerButton {
-    width: 30%;
+    margin-top: 13vh;
   }
 
   .popUp {
@@ -720,24 +617,43 @@ html {
   .teamSubsection {
     grid-template-columns: repeat(2, 1fr);
   }
-  footer {
-    grid-template-columns: repeat(2, 5% 74%);
-    column-gap: 18%;
+}
+@media all and (min-width: 750px) and (max-width: 1000px) {
+  .navContainer {
+    width: 110%;
+    margin-right: 3vw;
+    padding: 0;
   }
 }
 
 @media all and (min-width: 750px) and (orientation: Portrait) {
-  .headerSecond {
-    margin: 5vh 0 2% 7%;
+  .headerH1 {
+    margin-top: 10vh;
   }
-  .arrowSection,
-  .arrowImg2 {
+  .headerP1,
+  .aboutP1,
+  .aboutP2 {
+    margin-top: 0vh;
+  }
+  .aboutImg {
+    width: 70%;
+    margin: 1vh 0 2vh 0;
+  }
+  .aboutP2 {
+    margin-bottom: 4vh;
+  }
+  .swiper {
     margin: 0;
-    display: none;
+    /* background: red; */
   }
-  .headerButton {
-    padding: 1vh 2vw 1vh 2vw;
+  .timeline1,
+  .timeline {
+    margin: 2.4vh 0 0 0;
   }
+  .timeP1 {
+    line-height: 2.5vh;
+  }
+
   .popUpCon {
     padding-top: 5vh;
   }
@@ -751,24 +667,19 @@ html {
   .splashContainer {
     height: 110vh;
   }
-  footer {
-    grid-template-columns: repeat(2, 5% 75%);
-    column-gap: 20%;
-    width: 90vw;
-    box-sizing: border-box;
+  .footer {
+    grid-template-columns: repeat(2, 10% 59%);
+    column-gap: 30%;
   }
 }
 
 @media all and (max-width: 900px) {
   .navDiv {
-    grid-template-columns: repeat(2, 20% 64%);
-    column-gap: 12%;
+    grid-template-columns: repeat(3, 15% 46% 29%);
+    column-gap: 5%;
   }
-  .headerButton {
-    width: 40%;
-  }
-  footer {
-    grid-template-columns: repeat(2, 5% 75%);
+  .footer {
+    grid-template-columns: repeat(2, 10% 69%);
     column-gap: 20%;
   }
 }
@@ -791,14 +702,22 @@ html {
   }
   .navDiv {
     grid-template-columns: repeat(1, 1fr);
-    margin: -1vh 0 0 0%;
-    padding: 1vh 0 0 5%;
+    column-gap: 0%;
+    row-gap: 0%;
+    margin: 0vh 0 0 0%;
+    padding: 0vh 0 0 5%;
     width: 95%;
   }
-  .navContainer {
+  .navContainer,
+  .navThird {
     display: none;
     width: 40%;
     margin: 0vh 0 0 0;
+  }
+  .navThird {
+    display: none;
+    width: 25%;
+    margin-left: 7%;
   }
   .navMenu {
     padding: 1.5vh;
@@ -811,56 +730,51 @@ html {
   .navMenu:hover,
   .navMenu1:hover {
     border: 2px solid rgb(255, 255, 255, 1);
-    opacity: 0.7;
+    opacity: 0.5;
   }
-  .headerSecond {
-    grid-template-columns: repeat(1, 1fr);
-    height: 90%;
-    margin: 10vh 0 6vh 5%;
-    /* background:yellow; */
+  #login {
+    background: rgb(255, 255, 255, 0.3);
+    width: 26%;
   }
-  .text {
-    justify-self: center;
-    /* width: 100%; */
-    /* background: red; */
-    height: 80%;
-  }
-  .headerButton {
-    justify-self: center;
-    width: 40%;
-  }
-  .headerH1,
-  .headerP1 {
-    text-align: center;
-  }
-
   .headerH1 {
-    font-size: 60px;
-    text-align: center;
+    margin-top: 15vh;
+    width: 86%;
   }
-  .headerP1 {
-    font-size: 19px;
-    margin: 0 0 4vh 0;
-    text-align: center;
+  .headerP1,
+  .aboutP1,
+  .aboutP2 {
+    margin-top: 2vh;
+    width: 80%;
+  }
+  .aboutP2 {
+    margin-bottom: 3vh;
+  }
+  .swiper {
+    margin: 3vh 0 2vh 0;
   }
 
-  .arrowSection {
-    /* display: grid; */
-    justify-items: center;
-    align-items: start;
-    /* margin: 0vh 0 5vh 0; */
-    /* height:50%; */
-    /* background:red; */
+  .aboutImg {
+    width: 94%;
+    margin: 1vh 0 2vh 0;
   }
+  .aboutP2 {
+    width: 94%;
+  }
+  .timeline1,
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    align-items: center;
+    margin: 4vh 0 0 0;
+    width: 80%;
+  }
+
   .arrowImg {
     margin: 0;
   }
-  .arrowImg2 {
-    display: none;
-  }
 
   .bi56 {
-    display: none;
+    display: block;
     position: absolute;
     top: 3.6vh;
     right: 5vw;
@@ -880,17 +794,6 @@ html {
     padding: 0.2vh;
   }
 
-  .pointers {
-    display: none;
-    width: 94%;
-    justify-items: center;
-  }
-  .pointerCon {
-    width: 56%;
-  }
-  .corp {
-    font-size: 16px;
-  }
   .popUp {
     width: 98%;
   }
@@ -900,26 +803,7 @@ html {
   .popUpH4 {
     margin: 0vh 2vw 0 2vw;
   }
-  .mainCards {
-    grid-template-columns: repeat(1, 1fr);
-    padding-bottom: 78%;
-  }
-  .cardsCon {
-    padding: 0 3vw 0 3vw;
-  }
-  .mainBtn {
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0 1vw 0 6vw;
-    margin-bottom: 3vh;
-  }
-  .faqBox {
-    width: 70%;
-  }
-  .faqSummary {
-    width: 70%;
-  }
+
   .mainRoadmap2 {
     display: block;
     /* background: red; */
@@ -940,8 +824,8 @@ html {
     font-size: 30px;
   }
   .roadPar {
-    margin: 0 0 3vh 0;
-    /* background: yellow; */
+    line-height: 3.5vh;
+    text-align: center;
     font-size: 14px;
   }
 
@@ -967,52 +851,47 @@ html {
     background: white;
     border-radius: 8px;
   }
-  footer {
-    grid-template-columns: repeat(2, 20% 54%);
-    column-gap: 20%;
+  .footer {
+    grid-template-columns: repeat(2, 5% 69%);
+    column-gap: 25%;
   }
   .footerContainer {
-    /* background: red; */
     overflow-x: scroll;
-    cursor: all-scroll;
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
+
   .footerContainer::-webkit-scrollbar {
+    background: rgb(219, 0, 255);
     height: 0px;
   }
 }
 
 @media all and (max-width: 500px) {
-  .arrowSection {
-    margin: -6vh 0 2vh 0;
-    /* background: red; */
-    padding: 0;
-  }
-
-  .arrowImg {
-    /* height: 46vh; */
-    margin: 0;
-    padding: 0;
-  }
-  .mainCards {
-    grid-template-columns: repeat(1, 1fr);
-    padding-bottom: 88%;
-    background: black;
-  }
-  .cardsCon {
-    padding: 0 2vw 0 2vw;
-  }
-  .faqBox {
-    width: 80%;
-    padding: 0vh 1.4% 0vh 1.4%;
-  }
-  .faqSummary {
-    width: 80%;
-    padding: 0vh 1.4% 0vh 1.4%;
-  }
   .teamSubsection {
     grid-template-columns: repeat(3, 86%);
     width: 74%;
+  }
+  .navThird {
+    width: 44%;
+    padding-left: 5vw;
+  }
+  .swiper {
+    margin: 0;
+    padding: 0;
+    /* background: red; */
+  }
+  .swiper-slide {
+    /* background: green; */
+    margin: 0;
+    padding: 0;
+  }
+  .swiper-slide img {
+    margin: 0;
+    padding: 0;
+  }
+  .footer {
+    grid-template-columns: repeat(2, 5% 55%);
+    column-gap: 40%;
   }
 }
