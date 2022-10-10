@@ -155,6 +155,7 @@ html {
     justify-items: center;
   }
   .about {
+    padding-top: 3vh;
     display: grid;
   }
 
@@ -179,7 +180,7 @@ html {
   .headerBtn {
     font-family: `inter`;
     font-weight: 700;
-    font-size: clamp(14px, 1.2vw, 1.3vw);
+    font-size: clamp(18px, 1.2vw, 1.3vw);
     padding: 2vh 3vw 2vh 3vw;
     text-align: center;
     border: none;
@@ -193,6 +194,10 @@ html {
   .swiper {
     width: 100%;
     margin: 6vh 0 5vh 0;
+    background: transparent;
+  }
+  .swiper-slide {
+    background: transparent;
   }
 
   .swiper-slide img {
@@ -635,6 +640,11 @@ html {
   .aboutP2 {
     margin-top: 0vh;
   }
+  .headerBtn {
+    font-size: 24px;
+    padding: 1vh 4vw 1vh 4vw;
+    margin: 0;
+  }
   .aboutImg {
     width: 70%;
     margin: 1vh 0 2vh 0;
@@ -651,7 +661,7 @@ html {
     margin: 2.4vh 0 0 0;
   }
   .timeP1 {
-    line-height: 2.5vh;
+    line-height: 1.5vh;
   }
 
   .popUpCon {
@@ -669,6 +679,7 @@ html {
   }
   .footer {
     grid-template-columns: repeat(2, 10% 59%);
+    align-items: center;
     column-gap: 30%;
   }
 }
@@ -745,6 +756,9 @@ html {
   .aboutP2 {
     margin-top: 2vh;
     width: 80%;
+  }
+  .headerBtn {
+    padding: 2vh 5vw 2vh 5vw;
   }
   .aboutP2 {
     margin-bottom: 3vh;
